@@ -12,9 +12,9 @@ from pmkoalas.simple import Trace
 
 def create_model_net() -> FiniteLabelledMarkovChain:
     example_net = FiniteLabelledMarkovChain()
-    state_a =  MarkovState("1")
-    state_v = MarkovState("2")
-    state_c = MarkovState("3")
+    state_a =  MarkovState("a")
+    state_v = MarkovState("v")
+    state_c = MarkovState("c")
     state_f = MarkovState("4")
 
     example_net._alphabet.add("a")

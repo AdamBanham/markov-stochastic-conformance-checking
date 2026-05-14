@@ -1,7 +1,7 @@
 digraph motivated_example_01 {
 
-    ranksep=0.2;
-    nodesep=0.30;
+    ranksep=0.5;
+    nodesep=0.5;
     rankdir=LR;
     mclimit=10000;
     minlen=4;
@@ -11,26 +11,47 @@ digraph motivated_example_01 {
     node [width=0.47, height=0.47, fixedsize=true, fontname="sans-serif",fontsize=10];
     edge [arrowsize=0.7,arrowhead=vee];
     
-	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
-	1 [label=1 shape=circle xlabel=s1]
-	2 [label=2 shape=circle xlabel=s2]
-	3 [label=3 colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
-	
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+
+	a [label="2" shape=circle xlabel=s1]
+	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
+
+	
 	start -> "&epsilon;"
-	"1_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	1 -> "1_v" [dir=none]
-	"1_v" -> 2
-	"2_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	2 -> "2_c" [dir=none]
-	"2_c" -> 3
-	"2_f" [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	2 -> "2_f" [dir=none]
-	"2_f" -> 1
-	"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	
+	c -> "c_&chi;" [dir=none]
+	"c_&chi;" -> "&epsilon;"
+
+	a -> a_v [dir=none]
+	a_v -> v
+	
 	"&epsilon;" -> "&epsilon;_a" [dir=none]
-	"&epsilon;_a" -> 1
-	"3_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	3 -> "3_&chi;" [dir=none]
-	"3_&chi;" -> "&epsilon;"
+	"&epsilon;_a" -> a
+
+	v -> v_f [dir=none]
+	v_f -> a
+
+	v -> v_c [dir=none]
+	v_c -> c
+	
+	{
+	    rank=same
+	    "c_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	    "&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	}
+	
+	{
+	    rank=same
+    	a_v [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+		v_f [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	}
+	
+	{
+	    rank=same
+	    v [label="3" shape=circle xlabel=s2]
+	    	v_c [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+		c [label="4" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
+	}
+	
+	
 }
