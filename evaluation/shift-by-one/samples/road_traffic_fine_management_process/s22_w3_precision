@@ -1,0 +1,46 @@
+digraph FLMC {
+
+    ranksep=0.3;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=100;
+    minlen=5;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=10];
+    edge [arrowsize=0.7,arrowhead=vee];
+	"(L&amp;R)&lt;C,D,E&gt;" [label="{&lt;C,D,E&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;A,F&gt;" [label="{&lt;A,F&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;A,B&gt;" [label="{&lt;A,B&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;A,B,C&gt;" [label="{&lt;A,B,C&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&epsilon;" [label="{&epsilon;}" colorscheme=set28 fillcolor=1 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;B,C,D&gt;" [label="{&lt;B,C,D&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;A&gt;" [label="{&lt;A&gt;}" shape=Mrecord xlabel=""]
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;A,B&gt;_C" [label="C | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A,B&gt;" -> "(L&amp;R)&lt;A,B&gt;_C" [dir=none]
+	"(L&amp;R)&lt;A,B&gt;_C" -> "(L&amp;R)&lt;A,B,C&gt;"
+	"(L&amp;R)&lt;A,B,C&gt;_D" [label="D | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A,B,C&gt;" -> "(L&amp;R)&lt;A,B,C&gt;_D" [dir=none]
+	"(L&amp;R)&lt;A,B,C&gt;_D" -> "(L&amp;R)&lt;B,C,D&gt;"
+	"(L&amp;R)&epsilon;_A" [label="A | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_A" [dir=none]
+	"(L&amp;R)&epsilon;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;C,D,E&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C,D,E&gt;" -> "(L&amp;R)&lt;C,D,E&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;C,D,E&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;B,C,D&gt;_E" [label="E | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B,C,D&gt;" -> "(L&amp;R)&lt;B,C,D&gt;_E" [dir=none]
+	"(L&amp;R)&lt;B,C,D&gt;_E" -> "(L&amp;R)&lt;C,D,E&gt;"
+	"(L&amp;R)&lt;A&gt;_B" [label="B | 0.893" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_B" [dir=none]
+	"(L&amp;R)&lt;A&gt;_B" -> "(L&amp;R)&lt;A,B&gt;"
+	"(L&amp;R)&lt;A&gt;_F" [label="F | 0.107" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_F" [dir=none]
+	"(L&amp;R)&lt;A&gt;_F" -> "(L&amp;R)&lt;A,F&gt;"
+	"(L&amp;R)&lt;A,F&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A,F&gt;" -> "(L&amp;R)&lt;A,F&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;A,F&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+}

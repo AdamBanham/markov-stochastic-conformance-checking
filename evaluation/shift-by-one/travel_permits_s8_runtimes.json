@@ -1,0 +1,874 @@
+{
+    "recall": {
+        "_value": {
+            "intersect_nets": [],
+            "compute_stochastic_entropy_precision": [],
+            "compute_stochastic_entropy_recall": []
+        },
+        "1w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        51,
+                        51,
+                        51,
+                        51
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2.3237359523773193,
+                        2.2620677947998047,
+                        2.2806670665740967,
+                        2.3511369228363037
+                    ]
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        47,
+                        47,
+                        47,
+                        47
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.8902864456176758,
+                        1.8809494972229004,
+                        1.8261046409606934,
+                        1.8268241882324219
+                    ]
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        38,
+                        38,
+                        38,
+                        38
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.757171392440796,
+                        1.7339065074920654,
+                        1.6266467571258545,
+                        1.6250770092010498
+                    ]
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        27,
+                        27,
+                        27,
+                        27
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.4048247337341309,
+                        1.364877700805664,
+                        1.3474576473236084,
+                        1.3573799133300781
+                    ]
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        21,
+                        21,
+                        21,
+                        21
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.3059988021850586,
+                        1.375976324081421,
+                        1.3155708312988281,
+                        1.3149921894073486
+                    ]
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        21,
+                        21,
+                        21,
+                        21
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.3256285190582275,
+                        1.3132820129394531,
+                        1.347215175628662,
+                        1.3113212585449219
+                    ]
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.271620750427246,
+                        1.2537367343902588,
+                        1.326951265335083,
+                        1.2527687549591064
+                    ]
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        1.285334825515747,
+                        1.278717279434204,
+                        1.3135623931884766,
+                        1.2902536392211914
+                    ]
+                }
+            }
+        },
+        "2w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        452,
+                        452,
+                        452,
+                        452
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        117.07533073425293,
+                        120.01446652412415,
+                        118.1047420501709,
+                        117.0086874961853
+                    ]
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        281,
+                        281,
+                        281,
+                        281
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        92.00806713104248,
+                        91.75688457489014,
+                        91.93481874465942,
+                        91.82962274551392
+                    ]
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        116,
+                        116,
+                        116,
+                        116
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        123.79644751548767,
+                        113.90664720535278,
+                        89.66395378112793,
+                        88.67556238174438
+                    ]
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        57,
+                        57,
+                        57,
+                        57
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        87.77331352233887,
+                        87.86613273620605,
+                        87.93349981307983,
+                        88.30371022224426
+                    ]
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        38,
+                        38,
+                        38,
+                        38
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        87.84014296531677,
+                        87.76158452033997,
+                        88.20791101455688,
+                        87.69111108779907
+                    ]
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        34,
+                        34,
+                        34,
+                        34
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        87.79119873046875,
+                        87.77675080299377,
+                        87.89461302757263,
+                        87.70262932777405
+                    ]
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        19,
+                        19,
+                        19,
+                        19
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        88.15208125114441,
+                        88.08430194854736,
+                        87.75645303726196,
+                        87.93908143043518
+                    ]
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        94.35472893714905,
+                        93.91597533226013,
+                        94.0442943572998,
+                        94.21697115898132
+                    ]
+                }
+            }
+        },
+        "3w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        1111,
+                        1111,
+                        1111,
+                        1111
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        3027.1547117233276,
+                        3028.237893342972,
+                        3027.0830438137054,
+                        3026.8384006023407
+                    ]
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        604,
+                        604,
+                        604,
+                        604
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2330.5271825790405,
+                        2329.5342659950256,
+                        2330.379618883133,
+                        2373.149833917618
+                    ]
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        203,
+                        203,
+                        203,
+                        203
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2297.9262640476227,
+                        2296.757624387741,
+                        2298.773124217987,
+                        2297.766478061676
+                    ]
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        97,
+                        97,
+                        97,
+                        97
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2296.377867460251,
+                        2294.21897315979,
+                        2292.785210132599,
+                        2294.8864035606384
+                    ]
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        53,
+                        53,
+                        53,
+                        53
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2294.2935853004456,
+                        2294.939242362976,
+                        2298.092137336731,
+                        2296.3420214653015
+                    ]
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        46,
+                        46,
+                        46,
+                        46
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2301.387683868408,
+                        2298.1615750789642,
+                        2301.1697697639465,
+                        2300.256544828415
+                    ]
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        23,
+                        23,
+                        23,
+                        23
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2301.780755996704,
+                        2300.706959247589,
+                        2316.3468844890594,
+                        2475.54199385643
+                    ]
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [],
+                    "compute_stochastic_entropy_recall": [
+                        2442.4627718925476,
+                        2412.432799100876,
+                        2409.968591928482,
+                        2411.2260835170746
+                    ]
+                }
+            }
+        }
+    },
+    "precision": {
+        "_value": {
+            "intersect_nets": [],
+            "compute_stochastic_entropy_precision": [],
+            "compute_stochastic_entropy_recall": []
+        },
+        "1w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        51,
+                        51,
+                        51,
+                        51
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        1.9965479373931885,
+                        2.0483484268188477,
+                        2.0409960746765137,
+                        2.0056869983673096
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        47,
+                        47,
+                        47,
+                        47
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        1.2574760913848877,
+                        1.2895398139953613,
+                        1.2628536224365234,
+                        1.2530786991119385
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        38,
+                        38,
+                        38,
+                        38
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.7353014945983887,
+                        0.6850199699401855,
+                        0.681607723236084,
+                        0.7629415988922119
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        27,
+                        27,
+                        27,
+                        27
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.4016711711883545,
+                        0.4035012722015381,
+                        0.4006648063659668,
+                        0.4412112236022949
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        21,
+                        21,
+                        21,
+                        21
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.2827596664428711,
+                        0.232619047164917,
+                        0.22919154167175293,
+                        0.22470521926879883
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        21,
+                        21,
+                        21,
+                        21
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.27005457878112793,
+                        0.2225630283355713,
+                        0.22022485733032227,
+                        0.2211742401123047
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        14,
+                        14,
+                        14,
+                        14
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.23030877113342285,
+                        0.21228790283203125,
+                        0.20237016677856445,
+                        0.2001664638519287
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.1978297233581543,
+                        0.1835322380065918,
+                        0.1847524642944336,
+                        0.18670129776000977
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            }
+        },
+        "2w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        452,
+                        452,
+                        452,
+                        452
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        52.67612266540527,
+                        52.68248176574707,
+                        52.7812397480011,
+                        52.62737512588501
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        281,
+                        281,
+                        281,
+                        281
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        7.654155492782593,
+                        7.741443634033203,
+                        7.707252502441406,
+                        7.721458196640015
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        116,
+                        116,
+                        116,
+                        116
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        1.5318553447723389,
+                        1.465684413909912,
+                        1.4730229377746582,
+                        1.539487361907959
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        57,
+                        57,
+                        57,
+                        57
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.8164656162261963,
+                        0.7327072620391846,
+                        0.7184181213378906,
+                        0.721066951751709
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        38,
+                        38,
+                        38,
+                        38
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.5130181312561035,
+                        0.4908480644226074,
+                        0.5485067367553711,
+                        0.4893016815185547
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        34,
+                        34,
+                        34,
+                        34
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.48024654388427734,
+                        0.36702537536621094,
+                        0.37595462799072266,
+                        0.36637115478515625
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        19,
+                        19,
+                        19,
+                        19
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.35340166091918945,
+                        0.3205878734588623,
+                        0.37865471839904785,
+                        0.32926154136657715
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.36385345458984375,
+                        0.3066534996032715,
+                        0.308180570602417,
+                        0.3260352611541748
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            }
+        },
+        "3w": {
+            "_value": {
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": [],
+                "compute_stochastic_entropy_recall": []
+            },
+            "12%": {
+                "_value": {
+                    "intersect_nets": [
+                        1111,
+                        1111,
+                        1111,
+                        1111
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        1269.753751039505,
+                        1267.731960773468,
+                        1267.7329244613647,
+                        1267.528851032257
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "25%": {
+                "_value": {
+                    "intersect_nets": [
+                        604,
+                        604,
+                        604,
+                        604
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        61.93989419937134,
+                        61.90544080734253,
+                        68.33195757865906,
+                        80.90235328674316
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "38%": {
+                "_value": {
+                    "intersect_nets": [
+                        203,
+                        203,
+                        203,
+                        203
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        2.5558385848999023,
+                        2.6198410987854004,
+                        2.5562524795532227,
+                        2.5607199668884277
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "50%": {
+                "_value": {
+                    "intersect_nets": [
+                        97,
+                        97,
+                        97,
+                        97
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        1.1842100620269775,
+                        1.1626107692718506,
+                        1.204352855682373,
+                        1.1635632514953613
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "62%": {
+                "_value": {
+                    "intersect_nets": [
+                        53,
+                        53,
+                        53,
+                        53
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.7798628807067871,
+                        0.7614095211029053,
+                        0.8119347095489502,
+                        0.7599184513092041
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "75%": {
+                "_value": {
+                    "intersect_nets": [
+                        46,
+                        46,
+                        46,
+                        46
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.6784136295318604,
+                        0.5982792377471924,
+                        0.6681108474731445,
+                        0.6036019325256348
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "88%": {
+                "_value": {
+                    "intersect_nets": [
+                        23,
+                        23,
+                        23,
+                        23
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.6401197910308838,
+                        0.5928010940551758,
+                        0.6460676193237305,
+                        0.6051931381225586
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            },
+            "100%": {
+                "_value": {
+                    "intersect_nets": [
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        0.5102205276489258,
+                        0.5053038597106934,
+                        0.5579257011413574,
+                        0.5018494129180908
+                    ],
+                    "compute_stochastic_entropy_recall": []
+                }
+            }
+        }
+    }
+}

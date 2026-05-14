@@ -1,0 +1,16 @@
+digraph FLMC {
+
+    ranksep=0.3;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=100;
+    minlen=5;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=10];
+    edge [arrowsize=0.7,arrowhead=vee];
+	"(L&amp;R)&epsilon;" [label="{&epsilon;}" colorscheme=set28 fillcolor=1 shape=Mrecord style=filled xlabel=""]
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "(L&amp;R)&epsilon;"
+}

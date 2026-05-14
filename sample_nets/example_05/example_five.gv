@@ -1,0 +1,45 @@
+digraph example_five {
+
+    ranksep=0.3;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=5000;
+    minlen=5;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=16];
+    edge [arrowsize=0.7,arrowhead=vee];
+	"(L&amp;R)&lt;a,c,b&gt;" [label="{&lt;a,c,b&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=s5]
+	"(L&amp;R)&lt;a,b&gt;" [label="{&lt;a,b&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=s2]
+	"(L&amp;R)&lt;a,b,c&gt;" [label="{&lt;a,b,c&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=s4]
+	"(L&amp;R)&epsilon;" [label="{&epsilon;}" colorscheme=set28 fillcolor=1 shape=Mrecord style=filled xlabel=s0]
+	"(L&amp;R)&lt;a&gt;" [label="{&lt;a&gt;}" shape=Mrecord xlabel=s1]
+	"(L&amp;R)&lt;a,c&gt;" [label="{&lt;a,c&gt;}" shape=Mrecord xlabel=s3]
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_a" [dir=none]
+	"(L&amp;R)&epsilon;_a" -> "(L&amp;R)&lt;a&gt;"
+	"(L&amp;R)&lt;a&gt;_b" [label="b | 0.632" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a&gt;" -> "(L&amp;R)&lt;a&gt;_b" [dir=none]
+	"(L&amp;R)&lt;a&gt;_b" -> "(L&amp;R)&lt;a,b&gt;"
+	"(L&amp;R)&lt;a&gt;_c" [label="c | 0.368" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a&gt;" -> "(L&amp;R)&lt;a&gt;_c" [dir=none]
+	"(L&amp;R)&lt;a&gt;_c" -> "(L&amp;R)&lt;a,c&gt;"
+	"(L&amp;R)&lt;a,c&gt;_b" [label="b | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a,c&gt;" -> "(L&amp;R)&lt;a,c&gt;_b" [dir=none]
+	"(L&amp;R)&lt;a,c&gt;_b" -> "(L&amp;R)&lt;a,c,b&gt;"
+	"(L&amp;R)&lt;a,c,b&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a,c,b&gt;" -> "(L&amp;R)&lt;a,c,b&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;a,c,b&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;a,b,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a,b,c&gt;" -> "(L&amp;R)&lt;a,b,c&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;a,b,c&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;a,b&gt;_&chi;" [label="&chi; | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a,b&gt;" -> "(L&amp;R)&lt;a,b&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;a,b&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;a,b&gt;_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+	"(L&amp;R)&lt;a,b&gt;" -> "(L&amp;R)&lt;a,b&gt;_c" [dir=none]
+	"(L&amp;R)&lt;a,b&gt;_c" -> "(L&amp;R)&lt;a,b,c&gt;"
+}

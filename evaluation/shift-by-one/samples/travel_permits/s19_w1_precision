@@ -1,0 +1,1036 @@
+digraph FLMC {
+
+    ranksep=0.3;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=100;
+    minlen=5;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=10];
+    edge [arrowsize=0.7,arrowhead=vee];
+	"(L&amp;R)&lt;B&gt;" [label="{&lt;B&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;V&gt;" [label="{&lt;V&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;R&gt;" [label="{&lt;R&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;X&gt;" [label="{&lt;X&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;D&gt;" [label="{&lt;D&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;P&gt;" [label="{&lt;P&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;H&gt;" [label="{&lt;H&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;Q&gt;" [label="{&lt;Q&gt;}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;N&gt;" [label="{&lt;N&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;S&gt;" [label="{&lt;S&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;K&gt;" [label="{&lt;K&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;J&gt;" [label="{&lt;J&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;G&gt;" [label="{&lt;G&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AR&gt;" [label="{&lt;AR&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AG&gt;" [label="{&lt;AG&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AF&gt;" [label="{&lt;AF&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AH&gt;" [label="{&lt;AH&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;Z&gt;" [label="{&lt;Z&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;A&gt;" [label="{&lt;A&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;O&gt;" [label="{&lt;O&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AO&gt;" [label="{&lt;AO&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AT&gt;" [label="{&lt;AT&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;I&gt;" [label="{&lt;I&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AC&gt;" [label="{&lt;AC&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AI&gt;" [label="{&lt;AI&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AE&gt;" [label="{&lt;AE&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AP&gt;" [label="{&lt;AP&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AN&gt;" [label="{&lt;AN&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AU&gt;" [label="{&lt;AU&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;Y&gt;" [label="{&lt;Y&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AA&gt;" [label="{&lt;AA&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&epsilon;" [label="{&epsilon;}" colorscheme=set28 fillcolor=1 shape=Mrecord style=filled xlabel=""]
+	"(L&amp;R)&lt;AM&gt;" [label="{&lt;AM&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;W&gt;" [label="{&lt;W&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AS&gt;" [label="{&lt;AS&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;U&gt;" [label="{&lt;U&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AQ&gt;" [label="{&lt;AQ&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;T&gt;" [label="{&lt;T&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;M&gt;" [label="{&lt;M&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AL&gt;" [label="{&lt;AL&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;L&gt;" [label="{&lt;L&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;E&gt;" [label="{&lt;E&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;F&gt;" [label="{&lt;F&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AK&gt;" [label="{&lt;AK&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AJ&gt;" [label="{&lt;AJ&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AV&gt;" [label="{&lt;AV&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AB&gt;" [label="{&lt;AB&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;C&gt;" [label="{&lt;C&gt;}" shape=Mrecord xlabel=""]
+	"(L&amp;R)&lt;AD&gt;" [label="{&lt;AD&gt;}" shape=Mrecord xlabel=""]
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;N&gt;_K" [label="K | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;N&gt;" -> "(L&amp;R)&lt;N&gt;_K" [dir=none]
+	"(L&amp;R)&lt;N&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;N&gt;_S" [label="S | 0.014" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;N&gt;" -> "(L&amp;R)&lt;N&gt;_S" [dir=none]
+	"(L&amp;R)&lt;N&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;N&gt;_D" [label="D | 0.892" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;N&gt;" -> "(L&amp;R)&lt;N&gt;_D" [dir=none]
+	"(L&amp;R)&lt;N&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;N&gt;_A" [label="A | 0.06" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;N&gt;" -> "(L&amp;R)&lt;N&gt;_A" [dir=none]
+	"(L&amp;R)&lt;N&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;N&gt;_J" [label="J | 0.032" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;N&gt;" -> "(L&amp;R)&lt;N&gt;_J" [dir=none]
+	"(L&amp;R)&lt;N&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;S&gt;_S" [label="S | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_S" [dir=both]
+	"(L&amp;R)&lt;S&gt;_AU" [label="AU | 0.089" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_AU" [dir=none]
+	"(L&amp;R)&lt;S&gt;_AU" -> "(L&amp;R)&lt;AU&gt;"
+	"(L&amp;R)&lt;S&gt;_Y" [label="Y | 0.079" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_Y" [dir=none]
+	"(L&amp;R)&lt;S&gt;_Y" -> "(L&amp;R)&lt;Y&gt;"
+	"(L&amp;R)&lt;S&gt;_B" [label="B | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_B" [dir=none]
+	"(L&amp;R)&lt;S&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;S&gt;_AR" [label="AR | 0.767" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_AR" [dir=none]
+	"(L&amp;R)&lt;S&gt;_AR" -> "(L&amp;R)&lt;AR&gt;"
+	"(L&amp;R)&lt;S&gt;_AF" [label="AF | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_AF" [dir=none]
+	"(L&amp;R)&lt;S&gt;_AF" -> "(L&amp;R)&lt;AF&gt;"
+	"(L&amp;R)&lt;S&gt;_T" [label="T | 0.052" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_T" [dir=none]
+	"(L&amp;R)&lt;S&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;S&gt;_AJ" [label="AJ | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_AJ" [dir=none]
+	"(L&amp;R)&lt;S&gt;_AJ" -> "(L&amp;R)&lt;AJ&gt;"
+	"(L&amp;R)&lt;S&gt;_AP" [label="AP | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;S&gt;" -> "(L&amp;R)&lt;S&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;S&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;K&gt;_G" [label="G | 0.025" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_G" [dir=none]
+	"(L&amp;R)&lt;K&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;K&gt;_E" [label="E | 0.076" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_E" [dir=none]
+	"(L&amp;R)&lt;K&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;K&gt;_S" [label="S | 0.282" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_S" [dir=none]
+	"(L&amp;R)&lt;K&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;K&gt;_AG" [label="AG | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;K&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;K&gt;_B" [label="B | 0.043" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_B" [dir=none]
+	"(L&amp;R)&lt;K&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;K&gt;_A" [label="A | 0.554" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_A" [dir=none]
+	"(L&amp;R)&lt;K&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;K&gt;_J" [label="J | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_J" [dir=none]
+	"(L&amp;R)&lt;K&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;K&gt;_Q" [label="Q | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_Q" [dir=none]
+	"(L&amp;R)&lt;K&gt;_Q" -> "(L&amp;R)&lt;Q&gt;"
+	"(L&amp;R)&lt;K&gt;_V" [label="V | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;K&gt;" -> "(L&amp;R)&lt;K&gt;_V" [dir=none]
+	"(L&amp;R)&lt;K&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;J&gt;_K" [label="K | 0.944" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;J&gt;" -> "(L&amp;R)&lt;J&gt;_K" [dir=none]
+	"(L&amp;R)&lt;J&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;J&gt;_S" [label="S | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;J&gt;" -> "(L&amp;R)&lt;J&gt;_S" [dir=none]
+	"(L&amp;R)&lt;J&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;J&gt;_AI" [label="AI | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;J&gt;" -> "(L&amp;R)&lt;J&gt;_AI" [dir=none]
+	"(L&amp;R)&lt;J&gt;_AI" -> "(L&amp;R)&lt;AI&gt;"
+	"(L&amp;R)&lt;J&gt;_A" [label="A | 0.038" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;J&gt;" -> "(L&amp;R)&lt;J&gt;_A" [dir=none]
+	"(L&amp;R)&lt;J&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;J&gt;_T" [label="T | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;J&gt;" -> "(L&amp;R)&lt;J&gt;_T" [dir=none]
+	"(L&amp;R)&lt;J&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;G&gt;_K" [label="K | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_K" [dir=none]
+	"(L&amp;R)&lt;G&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;G&gt;_P" [label="P | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_P" [dir=none]
+	"(L&amp;R)&lt;G&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;G&gt;_G" [label="G | 0.038" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_G" [dir=both]
+	"(L&amp;R)&lt;G&gt;_S" [label="S | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_S" [dir=none]
+	"(L&amp;R)&lt;G&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;G&gt;_E" [label="E | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_E" [dir=none]
+	"(L&amp;R)&lt;G&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;G&gt;_F" [label="F | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_F" [dir=none]
+	"(L&amp;R)&lt;G&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;G&gt;_B" [label="B | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_B" [dir=none]
+	"(L&amp;R)&lt;G&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;G&gt;_AB" [label="AB | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_AB" [dir=none]
+	"(L&amp;R)&lt;G&gt;_AB" -> "(L&amp;R)&lt;AB&gt;"
+	"(L&amp;R)&lt;G&gt;_A" [label="A | 0.007" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_A" [dir=none]
+	"(L&amp;R)&lt;G&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;G&gt;_T" [label="T | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_T" [dir=none]
+	"(L&amp;R)&lt;G&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;G&gt;_V" [label="V | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_V" [dir=none]
+	"(L&amp;R)&lt;G&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;G&gt;_H" [label="H | 0.939" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_H" [dir=none]
+	"(L&amp;R)&lt;G&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;G&gt;_AP" [label="AP | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;G&gt;" -> "(L&amp;R)&lt;G&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;G&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;AR&gt;_AE" [label="AE | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AE" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_AE" -> "(L&amp;R)&lt;AE&gt;"
+	"(L&amp;R)&lt;AR&gt;_G" [label="G | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_G" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;AR&gt;_S" [label="S | 0.079" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AR&gt;_AT" [label="AT | 0.294" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;AR&gt;_E" [label="E | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AR&gt;_D" [label="D | 0.034" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AR&gt;_B" [label="B | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AR&gt;_AV" [label="AV | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AV" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_AV" -> "(L&amp;R)&lt;AV&gt;"
+	"(L&amp;R)&lt;AR&gt;_AR" [label="AR | 0.007" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AR" [dir=both]
+	"(L&amp;R)&lt;AR&gt;_A" [label="A | 0.018" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AR&gt;_J" [label="J | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_J" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;AR&gt;_T" [label="T | 0.495" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_T" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;AR&gt;_H" [label="H | 0.01" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_H" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;AR&gt;_AJ" [label="AJ | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AJ" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_AJ" -> "(L&amp;R)&lt;AJ&gt;"
+	"(L&amp;R)&lt;AR&gt;_AP" [label="AP | 0.029" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AR&gt;" -> "(L&amp;R)&lt;AR&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;AR&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;AG&gt;_E" [label="E | 0.059" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AG&gt;_S" [label="S | 0.777" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AG&gt;_AT" [label="AT | 0.029" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;AG&gt;_AG" [label="AG | 0.029" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_AG" [dir=both]
+	"(L&amp;R)&lt;AG&gt;_D" [label="D | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AG&gt;_B" [label="B | 0.029" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AG&gt;_A" [label="A | 0.062" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AG&gt;_J" [label="J | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AG&gt;" -> "(L&amp;R)&lt;AG&gt;_J" [dir=none]
+	"(L&amp;R)&lt;AG&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;AF&gt;_AG" [label="AG | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AF&gt;" -> "(L&amp;R)&lt;AF&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;AF&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;H&gt;_G" [label="G | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_G" [dir=none]
+	"(L&amp;R)&lt;H&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;H&gt;_R" [label="R | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_R" [dir=none]
+	"(L&amp;R)&lt;H&gt;_R" -> "(L&amp;R)&lt;R&gt;"
+	"(L&amp;R)&lt;H&gt;_H" [label="H | 0.044" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_H" [dir=both]
+	"(L&amp;R)&lt;H&gt;_S" [label="S | 0.027" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_S" [dir=none]
+	"(L&amp;R)&lt;H&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;H&gt;_AT" [label="AT | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;H&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;H&gt;_F" [label="F | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_F" [dir=none]
+	"(L&amp;R)&lt;H&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;H&gt;_E" [label="E | 0.018" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_E" [dir=none]
+	"(L&amp;R)&lt;H&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;H&gt;_B" [label="B | 0.021" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_B" [dir=none]
+	"(L&amp;R)&lt;H&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;H&gt;_Z" [label="Z | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_Z" [dir=none]
+	"(L&amp;R)&lt;H&gt;_Z" -> "(L&amp;R)&lt;Z&gt;"
+	"(L&amp;R)&lt;H&gt;_M" [label="M | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_M" [dir=none]
+	"(L&amp;R)&lt;H&gt;_M" -> "(L&amp;R)&lt;M&gt;"
+	"(L&amp;R)&lt;H&gt;_A" [label="A | 0.143" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_A" [dir=none]
+	"(L&amp;R)&lt;H&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;H&gt;_AL" [label="AL | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_AL" [dir=none]
+	"(L&amp;R)&lt;H&gt;_AL" -> "(L&amp;R)&lt;AL&gt;"
+	"(L&amp;R)&lt;H&gt;_T" [label="T | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_T" [dir=none]
+	"(L&amp;R)&lt;H&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;H&gt;_V" [label="V | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_V" [dir=none]
+	"(L&amp;R)&lt;H&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;H&gt;_&chi;" [label="&chi; | 0.731" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;H&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;H&gt;_U" [label="U | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;H&gt;" -> "(L&amp;R)&lt;H&gt;_U" [dir=none]
+	"(L&amp;R)&lt;H&gt;_U" -> "(L&amp;R)&lt;U&gt;"
+	"(L&amp;R)&lt;Q&gt;_E" [label="E | 0.146" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_E" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;Q&gt;_S" [label="S | 0.112" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_S" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;Q&gt;_F" [label="F | 0.045" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_F" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;Q&gt;_B" [label="B | 0.045" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_B" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;Q&gt;_A" [label="A | 0.067" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_A" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;Q&gt;_&chi;" [label="&chi; | 0.584" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Q&gt;" -> "(L&amp;R)&lt;Q&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;Q&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;AH&gt;_W" [label="W | 0.011" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_W" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_W" -> "(L&amp;R)&lt;W&gt;"
+	"(L&amp;R)&lt;AH&gt;_R" [label="R | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_R" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_R" -> "(L&amp;R)&lt;R&gt;"
+	"(L&amp;R)&lt;AH&gt;_S" [label="S | 0.026" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AH&gt;_D" [label="D | 0.528" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AH&gt;_AS" [label="AS | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_AS" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_AS" -> "(L&amp;R)&lt;AS&gt;"
+	"(L&amp;R)&lt;AH&gt;_B" [label="B | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AH&gt;_A" [label="A | 0.05" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AH&gt;_J" [label="J | 0.048" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_J" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;AH&gt;_AP" [label="AP | 0.324" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AH&gt;" -> "(L&amp;R)&lt;AH&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;AH&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;Z&gt;_V" [label="V | 0.012" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Z&gt;" -> "(L&amp;R)&lt;Z&gt;_V" [dir=none]
+	"(L&amp;R)&lt;Z&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;Z&gt;_E" [label="E | 0.954" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Z&gt;" -> "(L&amp;R)&lt;Z&gt;_E" [dir=none]
+	"(L&amp;R)&lt;Z&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;Z&gt;_S" [label="S | 0.035" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Z&gt;" -> "(L&amp;R)&lt;Z&gt;_S" [dir=none]
+	"(L&amp;R)&lt;Z&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;A&gt;_K" [label="K | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_K" [dir=none]
+	"(L&amp;R)&lt;A&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;A&gt;_G" [label="G | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_G" [dir=none]
+	"(L&amp;R)&lt;A&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;A&gt;_O" [label="O | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_O" [dir=none]
+	"(L&amp;R)&lt;A&gt;_O" -> "(L&amp;R)&lt;O&gt;"
+	"(L&amp;R)&lt;A&gt;_S" [label="S | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_S" [dir=none]
+	"(L&amp;R)&lt;A&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;A&gt;_AT" [label="AT | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;A&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;A&gt;_AO" [label="AO | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_AO" [dir=none]
+	"(L&amp;R)&lt;A&gt;_AO" -> "(L&amp;R)&lt;AO&gt;"
+	"(L&amp;R)&lt;A&gt;_C" [label="C | 0.024" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_C" [dir=none]
+	"(L&amp;R)&lt;A&gt;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;A&gt;_AH" [label="AH | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_AH" [dir=none]
+	"(L&amp;R)&lt;A&gt;_AH" -> "(L&amp;R)&lt;AH&gt;"
+	"(L&amp;R)&lt;A&gt;_M" [label="M | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_M" [dir=none]
+	"(L&amp;R)&lt;A&gt;_M" -> "(L&amp;R)&lt;M&gt;"
+	"(L&amp;R)&lt;A&gt;_AK" [label="AK | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_AK" [dir=none]
+	"(L&amp;R)&lt;A&gt;_AK" -> "(L&amp;R)&lt;AK&gt;"
+	"(L&amp;R)&lt;A&gt;_F" [label="F | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_F" [dir=none]
+	"(L&amp;R)&lt;A&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;A&gt;_H" [label="H | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_H" [dir=none]
+	"(L&amp;R)&lt;A&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;A&gt;_AP" [label="AP | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;A&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;A&gt;_W" [label="W | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_W" [dir=none]
+	"(L&amp;R)&lt;A&gt;_W" -> "(L&amp;R)&lt;W&gt;"
+	"(L&amp;R)&lt;A&gt;_E" [label="E | 0.018" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_E" [dir=none]
+	"(L&amp;R)&lt;A&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;A&gt;_D" [label="D | 0.028" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_D" [dir=none]
+	"(L&amp;R)&lt;A&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;A&gt;_B" [label="B | 0.901" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_B" [dir=none]
+	"(L&amp;R)&lt;A&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;A&gt;_J" [label="J | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_J" [dir=none]
+	"(L&amp;R)&lt;A&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;A&gt;_T" [label="T | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;A&gt;" -> "(L&amp;R)&lt;A&gt;_T" [dir=none]
+	"(L&amp;R)&lt;A&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;O&gt;_P" [label="P | 0.924" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;O&gt;" -> "(L&amp;R)&lt;O&gt;_P" [dir=none]
+	"(L&amp;R)&lt;O&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;O&gt;_E" [label="E | 0.061" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;O&gt;" -> "(L&amp;R)&lt;O&gt;_E" [dir=none]
+	"(L&amp;R)&lt;O&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;O&gt;_B" [label="B | 0.015" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;O&gt;" -> "(L&amp;R)&lt;O&gt;_B" [dir=none]
+	"(L&amp;R)&lt;O&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AO&gt;_P" [label="P | 0.959" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AO&gt;" -> "(L&amp;R)&lt;AO&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AO&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;AO&gt;_E" [label="E | 0.034" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AO&gt;" -> "(L&amp;R)&lt;AO&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AO&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AO&gt;_B" [label="B | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AO&gt;" -> "(L&amp;R)&lt;AO&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AO&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AT&gt;_AM" [label="AM | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_AM" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_AM" -> "(L&amp;R)&lt;AM&gt;"
+	"(L&amp;R)&lt;AT&gt;_G" [label="G | 0.015" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_G" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;AT&gt;_S" [label="S | 0.019" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AT&gt;_AT" [label="AT | 0.097" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_AT" [dir=both]
+	"(L&amp;R)&lt;AT&gt;_F" [label="F | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_F" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;AT&gt;_AG" [label="AG | 0.011" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;AT&gt;_D" [label="D | 0.055" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AT&gt;_B" [label="B | 0.015" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AT&gt;_A" [label="A | 0.026" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AT&gt;_T" [label="T | 0.739" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_T" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;AT&gt;_H" [label="H | 0.01" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_H" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;AT&gt;_AJ" [label="AJ | 0.01" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AT&gt;" -> "(L&amp;R)&lt;AT&gt;_AJ" [dir=none]
+	"(L&amp;R)&lt;AT&gt;_AJ" -> "(L&amp;R)&lt;AJ&gt;"
+	"(L&amp;R)&lt;I&gt;_A" [label="A | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;I&gt;" -> "(L&amp;R)&lt;I&gt;_A" [dir=none]
+	"(L&amp;R)&lt;I&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AC&gt;_X" [label="X | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AC&gt;" -> "(L&amp;R)&lt;AC&gt;_X" [dir=none]
+	"(L&amp;R)&lt;AC&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;AI&gt;_K" [label="K | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AI&gt;" -> "(L&amp;R)&lt;AI&gt;_K" [dir=none]
+	"(L&amp;R)&lt;AI&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;AI&gt;_P" [label="P | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AI&gt;" -> "(L&amp;R)&lt;AI&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AI&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;AE&gt;_P" [label="P | 0.943" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AE&gt;" -> "(L&amp;R)&lt;AE&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AE&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;AE&gt;_E" [label="E | 0.048" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AE&gt;" -> "(L&amp;R)&lt;AE&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AE&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AE&gt;_AI" [label="AI | 0.01" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AE&gt;" -> "(L&amp;R)&lt;AE&gt;_AI" [dir=none]
+	"(L&amp;R)&lt;AE&gt;_AI" -> "(L&amp;R)&lt;AI&gt;"
+	"(L&amp;R)&lt;AP&gt;_K" [label="K | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_K" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;AP&gt;_W" [label="W | 0.013" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_W" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_W" -> "(L&amp;R)&lt;W&gt;"
+	"(L&amp;R)&lt;AP&gt;_S" [label="S | 0.011" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AP&gt;_AT" [label="AT | 0.018" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;AP&gt;_AG" [label="AG | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;AP&gt;_D" [label="D | 0.813" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AP&gt;_B" [label="B | 0.013" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AP&gt;_A" [label="A | 0.061" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AP&gt;_J" [label="J | 0.067" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AP&gt;" -> "(L&amp;R)&lt;AP&gt;_J" [dir=none]
+	"(L&amp;R)&lt;AP&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;AN&gt;_X" [label="X | 0.992" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AN&gt;" -> "(L&amp;R)&lt;AN&gt;_X" [dir=none]
+	"(L&amp;R)&lt;AN&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;AN&gt;_C" [label="C | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AN&gt;" -> "(L&amp;R)&lt;AN&gt;_C" [dir=none]
+	"(L&amp;R)&lt;AN&gt;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;AU&gt;_AG" [label="AG | 0.877" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AU&gt;" -> "(L&amp;R)&lt;AU&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;AU&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;AU&gt;_D" [label="D | 0.034" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AU&gt;" -> "(L&amp;R)&lt;AU&gt;_D" [dir=none]
+	"(L&amp;R)&lt;AU&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;AU&gt;_S" [label="S | 0.089" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AU&gt;" -> "(L&amp;R)&lt;AU&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AU&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;Y&gt;_AK" [label="AK | 0.007" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Y&gt;" -> "(L&amp;R)&lt;Y&gt;_AK" [dir=none]
+	"(L&amp;R)&lt;Y&gt;_AK" -> "(L&amp;R)&lt;AK&gt;"
+	"(L&amp;R)&lt;Y&gt;_S" [label="S | 0.033" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Y&gt;" -> "(L&amp;R)&lt;Y&gt;_S" [dir=none]
+	"(L&amp;R)&lt;Y&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;Y&gt;_D" [label="D | 0.029" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Y&gt;" -> "(L&amp;R)&lt;Y&gt;_D" [dir=none]
+	"(L&amp;R)&lt;Y&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;Y&gt;_T" [label="T | 0.916" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Y&gt;" -> "(L&amp;R)&lt;Y&gt;_T" [dir=none]
+	"(L&amp;R)&lt;Y&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;Y&gt;_AJ" [label="AJ | 0.014" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;Y&gt;" -> "(L&amp;R)&lt;Y&gt;_AJ" [dir=none]
+	"(L&amp;R)&lt;Y&gt;_AJ" -> "(L&amp;R)&lt;AJ&gt;"
+	"(L&amp;R)&lt;AA&gt;_AB" [label="AB | 0.958" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AA&gt;" -> "(L&amp;R)&lt;AA&gt;_AB" [dir=none]
+	"(L&amp;R)&lt;AA&gt;_AB" -> "(L&amp;R)&lt;AB&gt;"
+	"(L&amp;R)&lt;AA&gt;_P" [label="P | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AA&gt;" -> "(L&amp;R)&lt;AA&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AA&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;AA&gt;_G" [label="G | 0.019" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AA&gt;" -> "(L&amp;R)&lt;AA&gt;_G" [dir=none]
+	"(L&amp;R)&lt;AA&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;AA&gt;_AD" [label="AD | 0.019" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AA&gt;" -> "(L&amp;R)&lt;AA&gt;_AD" [dir=none]
+	"(L&amp;R)&lt;AA&gt;_AD" -> "(L&amp;R)&lt;AD&gt;"
+	"(L&amp;R)&lt;P&gt;_P" [label="P | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_P" [dir=both]
+	"(L&amp;R)&lt;P&gt;_S" [label="S | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_S" [dir=none]
+	"(L&amp;R)&lt;P&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;P&gt;_E" [label="E | 0.959" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_E" [dir=none]
+	"(L&amp;R)&lt;P&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;P&gt;_F" [label="F | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_F" [dir=none]
+	"(L&amp;R)&lt;P&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;P&gt;_AG" [label="AG | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;P&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;P&gt;_AB" [label="AB | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_AB" [dir=none]
+	"(L&amp;R)&lt;P&gt;_AB" -> "(L&amp;R)&lt;AB&gt;"
+	"(L&amp;R)&lt;P&gt;_A" [label="A | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_A" [dir=none]
+	"(L&amp;R)&lt;P&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;P&gt;_T" [label="T | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_T" [dir=none]
+	"(L&amp;R)&lt;P&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;P&gt;_H" [label="H | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_H" [dir=none]
+	"(L&amp;R)&lt;P&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;P&gt;_&chi;" [label="&chi; | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;P&gt;" -> "(L&amp;R)&lt;P&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;P&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&epsilon;_I" [label="I | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_I" [dir=none]
+	"(L&amp;R)&epsilon;_I" -> "(L&amp;R)&lt;I&gt;"
+	"(L&amp;R)&epsilon;_A" [label="A | 0.093" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_A" [dir=none]
+	"(L&amp;R)&epsilon;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&epsilon;_C" [label="C | 0.904" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_C" [dir=none]
+	"(L&amp;R)&epsilon;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;AM&gt;_A" [label="A | 0.356" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AM&gt;" -> "(L&amp;R)&lt;AM&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AM&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AM&gt;_E" [label="E | 0.378" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AM&gt;" -> "(L&amp;R)&lt;AM&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AM&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AM&gt;_S" [label="S | 0.267" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AM&gt;" -> "(L&amp;R)&lt;AM&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AM&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;W&gt;_X" [label="X | 0.974" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;W&gt;" -> "(L&amp;R)&lt;W&gt;_X" [dir=none]
+	"(L&amp;R)&lt;W&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;W&gt;_B" [label="B | 0.026" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;W&gt;" -> "(L&amp;R)&lt;W&gt;_B" [dir=none]
+	"(L&amp;R)&lt;W&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;V&gt;_G" [label="G | 0.061" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;V&gt;" -> "(L&amp;R)&lt;V&gt;_G" [dir=none]
+	"(L&amp;R)&lt;V&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;V&gt;_C" [label="C | 0.273" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;V&gt;" -> "(L&amp;R)&lt;V&gt;_C" [dir=none]
+	"(L&amp;R)&lt;V&gt;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;V&gt;_A" [label="A | 0.151" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;V&gt;" -> "(L&amp;R)&lt;V&gt;_A" [dir=none]
+	"(L&amp;R)&lt;V&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;V&gt;_H" [label="H | 0.061" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;V&gt;" -> "(L&amp;R)&lt;V&gt;_H" [dir=none]
+	"(L&amp;R)&lt;V&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;V&gt;_&chi;" [label="&chi; | 0.454" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;V&gt;" -> "(L&amp;R)&lt;V&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;V&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;AS&gt;_X" [label="X | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AS&gt;" -> "(L&amp;R)&lt;AS&gt;_X" [dir=none]
+	"(L&amp;R)&lt;AS&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;U&gt;_E" [label="E | 0.176" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;U&gt;" -> "(L&amp;R)&lt;U&gt;_E" [dir=none]
+	"(L&amp;R)&lt;U&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;U&gt;_S" [label="S | 0.824" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;U&gt;" -> "(L&amp;R)&lt;U&gt;_S" [dir=none]
+	"(L&amp;R)&lt;U&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AQ&gt;_P" [label="P | 0.929" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AQ&gt;" -> "(L&amp;R)&lt;AQ&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AQ&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;AQ&gt;_AL" [label="AL | 0.036" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AQ&gt;" -> "(L&amp;R)&lt;AQ&gt;_AL" [dir=none]
+	"(L&amp;R)&lt;AQ&gt;_AL" -> "(L&amp;R)&lt;AL&gt;"
+	"(L&amp;R)&lt;AQ&gt;_AQ" [label="AQ | 0.036" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AQ&gt;" -> "(L&amp;R)&lt;AQ&gt;_AQ" [dir=both]
+	"(L&amp;R)&lt;T&gt;_K" [label="K | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_K" [dir=none]
+	"(L&amp;R)&lt;T&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;T&gt;_G" [label="G | 0.829" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_G" [dir=none]
+	"(L&amp;R)&lt;T&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;T&gt;_AK" [label="AK | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_AK" [dir=none]
+	"(L&amp;R)&lt;T&gt;_AK" -> "(L&amp;R)&lt;AK&gt;"
+	"(L&amp;R)&lt;T&gt;_S" [label="S | 0.022" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_S" [dir=none]
+	"(L&amp;R)&lt;T&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;T&gt;_F" [label="F | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_F" [dir=none]
+	"(L&amp;R)&lt;T&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;T&gt;_AT" [label="AT | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;T&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;T&gt;_D" [label="D | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_D" [dir=none]
+	"(L&amp;R)&lt;T&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;T&gt;_B" [label="B | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_B" [dir=none]
+	"(L&amp;R)&lt;T&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;T&gt;_A" [label="A | 0.03" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_A" [dir=none]
+	"(L&amp;R)&lt;T&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;T&gt;_J" [label="J | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_J" [dir=none]
+	"(L&amp;R)&lt;T&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;T&gt;_T" [label="T | 0.077" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_T" [dir=both]
+	"(L&amp;R)&lt;T&gt;_H" [label="H | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_H" [dir=none]
+	"(L&amp;R)&lt;T&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;T&gt;_U" [label="U | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;T&gt;" -> "(L&amp;R)&lt;T&gt;_U" [dir=none]
+	"(L&amp;R)&lt;T&gt;_U" -> "(L&amp;R)&lt;U&gt;"
+	"(L&amp;R)&lt;M&gt;_AE" [label="AE | 0.014" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_AE" [dir=none]
+	"(L&amp;R)&lt;M&gt;_AE" -> "(L&amp;R)&lt;AE&gt;"
+	"(L&amp;R)&lt;M&gt;_P" [label="P | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_P" [dir=none]
+	"(L&amp;R)&lt;M&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;M&gt;_G" [label="G | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_G" [dir=none]
+	"(L&amp;R)&lt;M&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;M&gt;_AA" [label="AA | 0.02" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_AA" [dir=none]
+	"(L&amp;R)&lt;M&gt;_AA" -> "(L&amp;R)&lt;AA&gt;"
+	"(L&amp;R)&lt;M&gt;_S" [label="S | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_S" [dir=none]
+	"(L&amp;R)&lt;M&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;M&gt;_E" [label="E | 0.014" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_E" [dir=none]
+	"(L&amp;R)&lt;M&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;M&gt;_F" [label="F | 0.603" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_F" [dir=none]
+	"(L&amp;R)&lt;M&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;M&gt;_B" [label="B | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_B" [dir=none]
+	"(L&amp;R)&lt;M&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;M&gt;_AL" [label="AL | 0.327" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_AL" [dir=none]
+	"(L&amp;R)&lt;M&gt;_AL" -> "(L&amp;R)&lt;AL&gt;"
+	"(L&amp;R)&lt;M&gt;_H" [label="H | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_H" [dir=none]
+	"(L&amp;R)&lt;M&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;M&gt;_AQ" [label="AQ | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;M&gt;" -> "(L&amp;R)&lt;M&gt;_AQ" [dir=none]
+	"(L&amp;R)&lt;M&gt;_AQ" -> "(L&amp;R)&lt;AQ&gt;"
+	"(L&amp;R)&lt;B&gt;_K" [label="K | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_K" [dir=none]
+	"(L&amp;R)&lt;B&gt;_K" -> "(L&amp;R)&lt;K&gt;"
+	"(L&amp;R)&lt;B&gt;_R" [label="R | 0.156" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_R" [dir=none]
+	"(L&amp;R)&lt;B&gt;_R" -> "(L&amp;R)&lt;R&gt;"
+	"(L&amp;R)&lt;B&gt;_P" [label="P | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_P" [dir=none]
+	"(L&amp;R)&lt;B&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;B&gt;_G" [label="G | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_G" [dir=none]
+	"(L&amp;R)&lt;B&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;B&gt;_AS" [label="AS | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AS" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AS" -> "(L&amp;R)&lt;AS&gt;"
+	"(L&amp;R)&lt;B&gt;_AM" [label="AM | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AM" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AM" -> "(L&amp;R)&lt;AM&gt;"
+	"(L&amp;R)&lt;B&gt;_L" [label="L | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_L" [dir=none]
+	"(L&amp;R)&lt;B&gt;_L" -> "(L&amp;R)&lt;L&gt;"
+	"(L&amp;R)&lt;B&gt;_S" [label="S | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_S" [dir=none]
+	"(L&amp;R)&lt;B&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;B&gt;_AO" [label="AO | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AO" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AO" -> "(L&amp;R)&lt;AO&gt;"
+	"(L&amp;R)&lt;B&gt;_C" [label="C | 0.072" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_C" [dir=none]
+	"(L&amp;R)&lt;B&gt;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;B&gt;_AH" [label="AH | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AH" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AH" -> "(L&amp;R)&lt;AH&gt;"
+	"(L&amp;R)&lt;B&gt;_M" [label="M | 0.011" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_M" [dir=none]
+	"(L&amp;R)&lt;B&gt;_M" -> "(L&amp;R)&lt;M&gt;"
+	"(L&amp;R)&lt;B&gt;_AL" [label="AL | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AL" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AL" -> "(L&amp;R)&lt;AL&gt;"
+	"(L&amp;R)&lt;B&gt;_Q" [label="Q | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_Q" [dir=none]
+	"(L&amp;R)&lt;B&gt;_Q" -> "(L&amp;R)&lt;Q&gt;"
+	"(L&amp;R)&lt;B&gt;_F" [label="F | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_F" [dir=none]
+	"(L&amp;R)&lt;B&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;B&gt;_X" [label="X | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_X" [dir=none]
+	"(L&amp;R)&lt;B&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;B&gt;_H" [label="H | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_H" [dir=none]
+	"(L&amp;R)&lt;B&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;B&gt;_&chi;" [label="&chi; | 0.066" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;B&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;B&gt;_AP" [label="AP | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;B&gt;_W" [label="W | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_W" [dir=none]
+	"(L&amp;R)&lt;B&gt;_W" -> "(L&amp;R)&lt;W&gt;"
+	"(L&amp;R)&lt;B&gt;_E" [label="E | 0.618" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_E" [dir=none]
+	"(L&amp;R)&lt;B&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;B&gt;_D" [label="D | 0.031" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_D" [dir=none]
+	"(L&amp;R)&lt;B&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;B&gt;_AR" [label="AR | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_AR" [dir=none]
+	"(L&amp;R)&lt;B&gt;_AR" -> "(L&amp;R)&lt;AR&gt;"
+	"(L&amp;R)&lt;B&gt;_J" [label="J | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_J" [dir=none]
+	"(L&amp;R)&lt;B&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;B&gt;_T" [label="T | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_T" [dir=none]
+	"(L&amp;R)&lt;B&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;B&gt;_V" [label="V | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;B&gt;" -> "(L&amp;R)&lt;B&gt;_V" [dir=none]
+	"(L&amp;R)&lt;B&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;AL&gt;_AE" [label="AE | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_AE" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_AE" -> "(L&amp;R)&lt;AE&gt;"
+	"(L&amp;R)&lt;AL&gt;_AA" [label="AA | 0.027" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_AA" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_AA" -> "(L&amp;R)&lt;AA&gt;"
+	"(L&amp;R)&lt;AL&gt;_S" [label="S | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;AL&gt;_AT" [label="AT | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;AL&gt;_F" [label="F | 0.942" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_F" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;AL&gt;_E" [label="E | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_E" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;AL&gt;_B" [label="B | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AL&gt;_A" [label="A | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AL&gt;_AL" [label="AL | 0.013" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_AL" [dir=both]
+	"(L&amp;R)&lt;AL&gt;_Q" [label="Q | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AL&gt;" -> "(L&amp;R)&lt;AL&gt;_Q" [dir=none]
+	"(L&amp;R)&lt;AL&gt;_Q" -> "(L&amp;R)&lt;Q&gt;"
+	"(L&amp;R)&lt;R&gt;_R" [label="R | 0.395" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_R" [dir=both]
+	"(L&amp;R)&lt;R&gt;_S" [label="S | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_S" [dir=none]
+	"(L&amp;R)&lt;R&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;R&gt;_E" [label="E | 0.158" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_E" [dir=none]
+	"(L&amp;R)&lt;R&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;R&gt;_D" [label="D | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_D" [dir=none]
+	"(L&amp;R)&lt;R&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;R&gt;_Q" [label="Q | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_Q" [dir=none]
+	"(L&amp;R)&lt;R&gt;_Q" -> "(L&amp;R)&lt;Q&gt;"
+	"(L&amp;R)&lt;R&gt;_&chi;" [label="&chi; | 0.435" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;R&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;R&gt;_AP" [label="AP | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;R&gt;" -> "(L&amp;R)&lt;R&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;R&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;L&gt;_F" [label="F | 0.959" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;L&gt;" -> "(L&amp;R)&lt;L&gt;_F" [dir=none]
+	"(L&amp;R)&lt;L&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;L&gt;_AE" [label="AE | 0.022" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;L&gt;" -> "(L&amp;R)&lt;L&gt;_AE" [dir=none]
+	"(L&amp;R)&lt;L&gt;_AE" -> "(L&amp;R)&lt;AE&gt;"
+	"(L&amp;R)&lt;L&gt;_P" [label="P | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;L&gt;" -> "(L&amp;R)&lt;L&gt;_P" [dir=none]
+	"(L&amp;R)&lt;L&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;L&gt;_AA" [label="AA | 0.017" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;L&gt;" -> "(L&amp;R)&lt;L&gt;_AA" [dir=none]
+	"(L&amp;R)&lt;L&gt;_AA" -> "(L&amp;R)&lt;AA&gt;"
+	"(L&amp;R)&lt;E&gt;_AE" [label="AE | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_AE" [dir=none]
+	"(L&amp;R)&lt;E&gt;_AE" -> "(L&amp;R)&lt;AE&gt;"
+	"(L&amp;R)&lt;E&gt;_P" [label="P | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_P" [dir=none]
+	"(L&amp;R)&lt;E&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+	"(L&amp;R)&lt;E&gt;_AA" [label="AA | 0.01" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_AA" [dir=none]
+	"(L&amp;R)&lt;E&gt;_AA" -> "(L&amp;R)&lt;AA&gt;"
+	"(L&amp;R)&lt;E&gt;_S" [label="S | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_S" [dir=none]
+	"(L&amp;R)&lt;E&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;E&gt;_O" [label="O | 0.009" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_O" [dir=none]
+	"(L&amp;R)&lt;E&gt;_O" -> "(L&amp;R)&lt;O&gt;"
+	"(L&amp;R)&lt;E&gt;_F" [label="F | 0.079" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_F" [dir=none]
+	"(L&amp;R)&lt;E&gt;_F" -> "(L&amp;R)&lt;F&gt;"
+	"(L&amp;R)&lt;E&gt;_AO" [label="AO | 0.191" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_AO" [dir=none]
+	"(L&amp;R)&lt;E&gt;_AO" -> "(L&amp;R)&lt;AO&gt;"
+	"(L&amp;R)&lt;E&gt;_AT" [label="AT | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;E&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;E&gt;_B" [label="B | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_B" [dir=none]
+	"(L&amp;R)&lt;E&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;E&gt;_M" [label="M | 0.628" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_M" [dir=none]
+	"(L&amp;R)&lt;E&gt;_M" -> "(L&amp;R)&lt;M&gt;"
+	"(L&amp;R)&lt;E&gt;_A" [label="A | 0.008" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_A" [dir=none]
+	"(L&amp;R)&lt;E&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;E&gt;_H" [label="H | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_H" [dir=none]
+	"(L&amp;R)&lt;E&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;E&gt;_L" [label="L | 0.064" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;E&gt;" -> "(L&amp;R)&lt;E&gt;_L" [dir=none]
+	"(L&amp;R)&lt;E&gt;_L" -> "(L&amp;R)&lt;L&gt;"
+	"(L&amp;R)&lt;F&gt;_G" [label="G | 0.961" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_G" [dir=none]
+	"(L&amp;R)&lt;F&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;F&gt;_E" [label="E | 0.006" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_E" [dir=none]
+	"(L&amp;R)&lt;F&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;F&gt;_F" [label="F | 0.012" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_F" [dir=both]
+	"(L&amp;R)&lt;F&gt;_B" [label="B | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_B" [dir=none]
+	"(L&amp;R)&lt;F&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;F&gt;_Z" [label="Z | 0.015" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_Z" [dir=none]
+	"(L&amp;R)&lt;F&gt;_Z" -> "(L&amp;R)&lt;Z&gt;"
+	"(L&amp;R)&lt;F&gt;_M" [label="M | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_M" [dir=none]
+	"(L&amp;R)&lt;F&gt;_M" -> "(L&amp;R)&lt;M&gt;"
+	"(L&amp;R)&lt;F&gt;_A" [label="A | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_A" [dir=none]
+	"(L&amp;R)&lt;F&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;F&gt;_T" [label="T | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_T" [dir=none]
+	"(L&amp;R)&lt;F&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;F&gt;_V" [label="V | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_V" [dir=none]
+	"(L&amp;R)&lt;F&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;F&gt;_H" [label="H | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;F&gt;" -> "(L&amp;R)&lt;F&gt;_H" [dir=none]
+	"(L&amp;R)&lt;F&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;AK&gt;_G" [label="G | 0.906" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AK&gt;" -> "(L&amp;R)&lt;AK&gt;_G" [dir=none]
+	"(L&amp;R)&lt;AK&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;AK&gt;_T" [label="T | 0.063" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AK&gt;" -> "(L&amp;R)&lt;AK&gt;_T" [dir=none]
+	"(L&amp;R)&lt;AK&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;AK&gt;_B" [label="B | 0.031" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AK&gt;" -> "(L&amp;R)&lt;AK&gt;_B" [dir=none]
+	"(L&amp;R)&lt;AK&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;X&gt;_A" [label="A | 0.171" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;X&gt;" -> "(L&amp;R)&lt;X&gt;_A" [dir=none]
+	"(L&amp;R)&lt;X&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;X&gt;_C" [label="C | 0.758" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;X&gt;" -> "(L&amp;R)&lt;X&gt;_C" [dir=none]
+	"(L&amp;R)&lt;X&gt;_C" -> "(L&amp;R)&lt;C&gt;"
+	"(L&amp;R)&lt;X&gt;_&chi;" [label="&chi; | 0.057" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;X&gt;" -> "(L&amp;R)&lt;X&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;X&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;X&gt;_B" [label="B | 0.014" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;X&gt;" -> "(L&amp;R)&lt;X&gt;_B" [dir=none]
+	"(L&amp;R)&lt;X&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;AJ&gt;_T" [label="T | 0.07" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AJ&gt;" -> "(L&amp;R)&lt;AJ&gt;_T" [dir=none]
+	"(L&amp;R)&lt;AJ&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;AJ&gt;_AK" [label="AK | 0.86" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AJ&gt;" -> "(L&amp;R)&lt;AJ&gt;_AK" [dir=none]
+	"(L&amp;R)&lt;AJ&gt;_AK" -> "(L&amp;R)&lt;AK&gt;"
+	"(L&amp;R)&lt;AJ&gt;_A" [label="A | 0.035" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AJ&gt;" -> "(L&amp;R)&lt;AJ&gt;_A" [dir=none]
+	"(L&amp;R)&lt;AJ&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;AJ&gt;_S" [label="S | 0.035" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AJ&gt;" -> "(L&amp;R)&lt;AJ&gt;_S" [dir=none]
+	"(L&amp;R)&lt;AJ&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;D&gt;_G" [label="G | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_G" [dir=none]
+	"(L&amp;R)&lt;D&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;D&gt;_R" [label="R | 0.034" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_R" [dir=none]
+	"(L&amp;R)&lt;D&gt;_R" -> "(L&amp;R)&lt;R&gt;"
+	"(L&amp;R)&lt;D&gt;_S" [label="S | 0.137" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_S" [dir=none]
+	"(L&amp;R)&lt;D&gt;_S" -> "(L&amp;R)&lt;S&gt;"
+	"(L&amp;R)&lt;D&gt;_AT" [label="AT | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_AT" [dir=none]
+	"(L&amp;R)&lt;D&gt;_AT" -> "(L&amp;R)&lt;AT&gt;"
+	"(L&amp;R)&lt;D&gt;_E" [label="E | 0.112" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_E" [dir=none]
+	"(L&amp;R)&lt;D&gt;_E" -> "(L&amp;R)&lt;E&gt;"
+	"(L&amp;R)&lt;D&gt;_AU" [label="AU | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_AU" [dir=none]
+	"(L&amp;R)&lt;D&gt;_AU" -> "(L&amp;R)&lt;AU&gt;"
+	"(L&amp;R)&lt;D&gt;_AG" [label="AG | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_AG" [dir=none]
+	"(L&amp;R)&lt;D&gt;_AG" -> "(L&amp;R)&lt;AG&gt;"
+	"(L&amp;R)&lt;D&gt;_B" [label="B | 0.041" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_B" [dir=none]
+	"(L&amp;R)&lt;D&gt;_B" -> "(L&amp;R)&lt;B&gt;"
+	"(L&amp;R)&lt;D&gt;_A" [label="A | 0.649" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_A" [dir=none]
+	"(L&amp;R)&lt;D&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;D&gt;_T" [label="T | 0.013" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_T" [dir=none]
+	"(L&amp;R)&lt;D&gt;_T" -> "(L&amp;R)&lt;T&gt;"
+	"(L&amp;R)&lt;D&gt;_Q" [label="Q | 0.002" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_Q" [dir=none]
+	"(L&amp;R)&lt;D&gt;_Q" -> "(L&amp;R)&lt;Q&gt;"
+	"(L&amp;R)&lt;D&gt;_V" [label="V | 0.004" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_V" [dir=none]
+	"(L&amp;R)&lt;D&gt;_V" -> "(L&amp;R)&lt;V&gt;"
+	"(L&amp;R)&lt;D&gt;_H" [label="H | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_H" [dir=none]
+	"(L&amp;R)&lt;D&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;D&gt;_AM" [label="AM | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_AM" [dir=none]
+	"(L&amp;R)&lt;D&gt;_AM" -> "(L&amp;R)&lt;AM&gt;"
+	"(L&amp;R)&lt;D&gt;_&chi;" [label="&chi; | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;D&gt;" -> "(L&amp;R)&lt;D&gt;_&chi;" [dir=none]
+	"(L&amp;R)&lt;D&gt;_&chi;" -> "(L&amp;R)&epsilon;"
+	"(L&amp;R)&lt;AV&gt;_AP" [label="AP | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AV&gt;" -> "(L&amp;R)&lt;AV&gt;_AP" [dir=none]
+	"(L&amp;R)&lt;AV&gt;_AP" -> "(L&amp;R)&lt;AP&gt;"
+	"(L&amp;R)&lt;AB&gt;_H" [label="H | 0.005" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AB&gt;" -> "(L&amp;R)&lt;AB&gt;_H" [dir=none]
+	"(L&amp;R)&lt;AB&gt;_H" -> "(L&amp;R)&lt;H&gt;"
+	"(L&amp;R)&lt;AB&gt;_G" [label="G | 0.995" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AB&gt;" -> "(L&amp;R)&lt;AB&gt;_G" [dir=none]
+	"(L&amp;R)&lt;AB&gt;_G" -> "(L&amp;R)&lt;G&gt;"
+	"(L&amp;R)&lt;C&gt;_W" [label="W | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_W" [dir=none]
+	"(L&amp;R)&lt;C&gt;_W" -> "(L&amp;R)&lt;W&gt;"
+	"(L&amp;R)&lt;C&gt;_AC" [label="AC | 0.003" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_AC" [dir=none]
+	"(L&amp;R)&lt;C&gt;_AC" -> "(L&amp;R)&lt;AC&gt;"
+	"(L&amp;R)&lt;C&gt;_D" [label="D | 0.093" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_D" [dir=none]
+	"(L&amp;R)&lt;C&gt;_D" -> "(L&amp;R)&lt;D&gt;"
+	"(L&amp;R)&lt;C&gt;_AN" [label="AN | 0.018" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_AN" [dir=none]
+	"(L&amp;R)&lt;C&gt;_AN" -> "(L&amp;R)&lt;AN&gt;"
+	"(L&amp;R)&lt;C&gt;_AH" [label="AH | 0.784" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_AH" [dir=none]
+	"(L&amp;R)&lt;C&gt;_AH" -> "(L&amp;R)&lt;AH&gt;"
+	"(L&amp;R)&lt;C&gt;_A" [label="A | 0.001" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_A" [dir=none]
+	"(L&amp;R)&lt;C&gt;_A" -> "(L&amp;R)&lt;A&gt;"
+	"(L&amp;R)&lt;C&gt;_X" [label="X | 0.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_X" [dir=none]
+	"(L&amp;R)&lt;C&gt;_X" -> "(L&amp;R)&lt;X&gt;"
+	"(L&amp;R)&lt;C&gt;_J" [label="J | 0.022" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_J" [dir=none]
+	"(L&amp;R)&lt;C&gt;_J" -> "(L&amp;R)&lt;J&gt;"
+	"(L&amp;R)&lt;C&gt;_N" [label="N | 0.075" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;C&gt;" -> "(L&amp;R)&lt;C&gt;_N" [dir=none]
+	"(L&amp;R)&lt;C&gt;_N" -> "(L&amp;R)&lt;N&gt;"
+	"(L&amp;R)&lt;AD&gt;_P" [label="P | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"(L&amp;R)&lt;AD&gt;" -> "(L&amp;R)&lt;AD&gt;_P" [dir=none]
+	"(L&amp;R)&lt;AD&gt;_P" -> "(L&amp;R)&lt;P&gt;"
+}

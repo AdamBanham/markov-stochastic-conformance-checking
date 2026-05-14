@@ -1,0 +1,64 @@
+{
+    "recall": {
+        "_value": {
+            "compute_stochastic_entropy_recall": [],
+            "intersect_nets": [],
+            "compute_stochastic_entropy_precision": []
+        },
+        "1w": {
+            "_value": {
+                "compute_stochastic_entropy_recall": [],
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": []
+            },
+            "1%": {
+                "_value": {
+                    "compute_stochastic_entropy_recall": [
+                        2.5728437900543213,
+                        2.556999444961548,
+                        2.545724868774414,
+                        2.580919027328491
+                    ],
+                    "intersect_nets": [
+                        52,
+                        52,
+                        52,
+                        52
+                    ],
+                    "compute_stochastic_entropy_precision": []
+                }
+            }
+        }
+    },
+    "precision": {
+        "_value": {
+            "compute_stochastic_entropy_recall": [],
+            "intersect_nets": [],
+            "compute_stochastic_entropy_precision": []
+        },
+        "1w": {
+            "_value": {
+                "compute_stochastic_entropy_recall": [],
+                "intersect_nets": [],
+                "compute_stochastic_entropy_precision": []
+            },
+            "1%": {
+                "_value": {
+                    "compute_stochastic_entropy_recall": [],
+                    "intersect_nets": [
+                        52,
+                        52,
+                        52,
+                        52
+                    ],
+                    "compute_stochastic_entropy_precision": [
+                        2.5549700260162354,
+                        2.566843271255493,
+                        2.613507032394409,
+                        2.570146322250366
+                    ]
+                }
+            }
+        }
+    }
+}

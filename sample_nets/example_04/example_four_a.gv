@@ -1,0 +1,58 @@
+digraph example_four_a {
+
+    ranksep=0.3;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=10;
+    minlen=2;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.47, height=0.47, fixedsize=true, fontname="sans-serif",fontsize=10];
+    edge [arrowsize=0.7,arrowhead=vee];
+	"&lt;a,b&gt;" [label="&lt;a,b&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
+	"&lt;a,b,c&gt;" [label="&lt;a,b,c&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s6]
+	"&lt;a,c,b&gt;" [label="&lt;a,c,b&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s7]
+	"&lt;z,f&gt;" [label="&lt;z,f&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s5]
+	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 penwidth=1 shape=doublecircle style=filled xlabel=s0]
+	"&lt;a,c&gt;" [label="&lt;a,c&gt;" shape=circle xlabel=s4]
+	"&lt;z&gt;" [label="&lt;z&gt;" shape=circle xlabel=s2]
+	"&lt;a&gt;" [label="&lt;a&gt;" shape=circle xlabel=s1]
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "&epsilon;"
+	"&lt;a,b&gt;_&chi;" [label="&chi; | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,b&gt;" -> "&lt;a,b&gt;_&chi;" [dir=none]
+	"&lt;a,b&gt;_&chi;" -> "&epsilon;"
+	"&lt;a,b&gt;_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,b&gt;" -> "&lt;a,b&gt;_c" [dir=none]
+	"&lt;a,b&gt;_c" -> "&lt;a,b,c&gt;"
+	"&lt;z&gt;_f" [label="f | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;z&gt;" -> "&lt;z&gt;_f" [dir=none]
+	"&lt;z&gt;_f" -> "&lt;z,f&gt;"
+	"&lt;a,c&gt;_b" [label="b | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,c&gt;" -> "&lt;a,c&gt;_b" [dir=none]
+	"&lt;a,c&gt;_b" -> "&lt;a,c,b&gt;"
+	"&lt;a,b,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,b,c&gt;" -> "&lt;a,b,c&gt;_&chi;" [dir=none]
+	"&lt;a,b,c&gt;_&chi;" -> "&epsilon;"
+	"&lt;a&gt;_c" [label="c | 0.368" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a&gt;" -> "&lt;a&gt;_c" [dir=none]
+	"&lt;a&gt;_c" -> "&lt;a,c&gt;"
+	"&lt;a&gt;_b" [label="b | 0.632" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a&gt;" -> "&lt;a&gt;_b" [dir=none]
+	"&lt;a&gt;_b" -> "&lt;a,b&gt;"
+	"&lt;a,c,b&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,c,b&gt;" -> "&lt;a,c,b&gt;_&chi;" [dir=none]
+	"&lt;a,c,b&gt;_&chi;" -> "&epsilon;"
+	"&lt;z,f&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;z,f&gt;" -> "&lt;z,f&gt;_&chi;" [dir=none]
+	"&lt;z,f&gt;_&chi;" -> "&epsilon;"
+	"&epsilon;_a" [label="a | 0.826" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&epsilon;" -> "&epsilon;_a" [dir=none]
+	"&epsilon;_a" -> "&lt;a&gt;"
+	"&epsilon;_z" [label="z | 0.087" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&epsilon;" -> "&epsilon;_z" [dir=none]
+	"&epsilon;_z" -> "&lt;z&gt;"
+	"&epsilon;_&chi;" [label="&chi; | 0.087" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&epsilon;" -> "&epsilon;_&chi;" [dir=both]
+}
