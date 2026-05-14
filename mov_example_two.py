@@ -24,7 +24,7 @@ def create():
     # clear_directory(dump_directory)
 
     log = convert(*["a v c"])
-    rlog= convert(*(["a v c"] + ["a v c f v c"]))
+    rlog= convert(*(["a v c"] + ["a v f v c"]))
 
     source_log = create_model_net()
     left_net = discover_chain_from_log(log)

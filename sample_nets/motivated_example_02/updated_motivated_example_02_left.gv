@@ -1,6 +1,6 @@
 digraph motivated_example_02_left {
 
-    ranksep=0.2;
+    ranksep=0.3;
     nodesep=0.3;
     rankdir=LR;
     mclimit=10000;
@@ -12,22 +12,38 @@ digraph motivated_example_02_left {
     edge [arrowsize=0.7,arrowhead=vee];
     
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
-	"&lt;c&gt;" [label="&lt;c&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
-	"&lt;a&gt;" [label="&lt;a&gt;" shape=circle xlabel=s1]
+
+	
 	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
-	"&lt;v&gt;" [label="&lt;v&gt;" shape=circle xlabel=s2]
+	
+	
 	
 	start -> "&epsilon;"
-	"&lt;a&gt;_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;a&gt;" -> "&lt;a&gt;_v" [dir=none]
-	"&lt;a&gt;_v" -> "&lt;v&gt;"
+	
+	"2'" -> "2'_v" [dir=none]
+	"2'_v" -> "3'"
 	"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
 	"&epsilon;" -> "&epsilon;_a" [dir=none]
-	"&epsilon;_a" -> "&lt;a&gt;"
-	"&lt;v&gt;_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;v&gt;" -> "&lt;v&gt;_c" [dir=none]
-	"&lt;v&gt;_c" -> "&lt;c&gt;"
-	"&lt;c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;c&gt;" -> "&lt;c&gt;_&chi;" [dir=none]
-	"&lt;c&gt;_&chi;" -> "&epsilon;"
+	"&epsilon;_a" -> "2'"
+	
+	"3'" -> "3'_c" [dir=none]
+	"3'_c" -> "4'"
+	
+	"4'" -> "4'_&chi;" [dir=none]
+	"4'_&chi;" -> "&epsilon;"
+	
+	"2'_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	
+	{
+	    rank=same
+	    "4'_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	    "2'" [label="2'" shape=circle xlabel=s1]
+	}
+	
+	{
+	    rank=same
+    	"4'" [label="4'" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
+    	"3'_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+    	"3'" [label="3'" shape=circle xlabel=s2]
+	}
 }

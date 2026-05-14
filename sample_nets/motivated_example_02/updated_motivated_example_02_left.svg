@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   width="800.08142"
-   height="140.34924"
-   viewBox="0 0 600.06107 105.26193"
+   width="908.99487"
+   height="416.86832"
+   viewBox="0 0 681.74615 312.65124"
    version="1.1"
    id="svg20"
    sodipodi:docname="updated_motivated_example_02_left.svg"
@@ -26,8 +26,8 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:zoom="0.99268293"
-     inkscape:cx="408.99263"
-     inkscape:cy="83.108108"
+     inkscape:cx="405.46683"
+     inkscape:cy="213.05897"
      inkscape:window-width="3440"
      inkscape:window-height="1417"
      inkscape:window-x="-8"
@@ -37,20 +37,20 @@
   <g
      id="node1"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
        id="title2">start</title>
     <circle
        fill="#000000"
        stroke="#000000"
        cx="20.82"
-       cy="-28.92"
+       cy="-100.92"
        id="ellipse2"
        r="3.5999999" />
     <text
        text-anchor="middle"
        x="8.6099997"
-       y="-16.32"
+       y="-88.32"
        font-family="sans-serif"
        font-size="10px"
        id="text2">start</text>
@@ -58,27 +58,27 @@
   <g
      id="node2"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
        id="title3" />
     <circle
        fill="#66c2a5"
        stroke="#000000"
-       cx="55.34"
-       cy="-28.92"
+       cx="63.34"
+       cy="-100.92"
        id="ellipse3"
        r="16.92" />
     <text
        text-anchor="middle"
-       x="55.34"
-       y="-25.92"
+       x="63.34"
+       y="-97.919998"
        font-family="sans-serif"
        font-size="10px"
        id="text3">ε</text>
     <text
        text-anchor="middle"
-       x="33.970001"
-       y="-3"
+       x="41.970001"
+       y="-75"
        font-family="sans-serif"
        font-size="10px"
        id="text4">s0</text>
@@ -86,30 +86,30 @@
   <g
      id="edge1"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
        id="title4">start-&gt;</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 24.82,-28.92 c 1.35,0 3.07,0 5.01,0"
+       d="m 24.73,-100.92 c 3.02,0 8.06,0 13.48,0"
        id="path4" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="29.79,-28.92 29.79,-28.92 34.51,-28.92 29.79,-25.77 36.79,-28.92 29.79,-32.07 34.51,-28.92 29.79,-28.92 "
+       points="38.02,-100.92 38.02,-100.92 42.74,-100.92 38.02,-97.77 45.02,-100.92 38.02,-104.07 42.74,-100.92 38.02,-100.92 "
        id="polygon4" />
   </g>
   <g
-     id="node7"
+     id="node6"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
        id="title5">_a</title>
     <text
        text-anchor="middle"
-       x="107.86"
-       y="-50.32"
+       x="123.86"
+       y="-122.32"
        font-family="Times, serif"
        font-size="12px"
        fill="#66c2a5"
@@ -118,53 +118,53 @@
   <g
      id="edge4"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
        id="title6">-&gt;_a</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 70.95,-36.15 c 4.78,-2.37 10.18,-5.04 15.32,-7.58"
+       d="m 79.41,-107.36 c 7.04,-3.01 15.53,-6.64 23.13,-9.88"
        id="path6" />
   </g>
   <g
      id="node3"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title7">&lt;a&gt;</title>
+       id="title7">2'</title>
     <circle
        fill="none"
        stroke="#000000"
-       cx="160.38"
-       cy="-56.919998"
+       cx="189.06"
+       cy="-131.92"
        id="ellipse7"
        r="16.92" />
     <text
        text-anchor="middle"
-       x="160.38"
-       y="-53.919998"
+       x="189.06"
+       y="-128.92"
        font-family="sans-serif"
        font-size="10px"
-       id="text7">1</text>
+       id="text7">2'</text>
     <text
        text-anchor="middle"
-       x="139.00999"
-       y="-31"
+       x="167.69"
+       y="-106"
        font-family="sans-serif"
        font-size="10px"
        id="text8">s1</text>
   </g>
   <g
-     id="node6"
+     id="node4"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title8">&lt;a&gt;_v</title>
+       id="title8">2'_v</title>
     <text
        text-anchor="middle"
-       x="212.89999"
-       y="-53.32"
+       x="254.25999"
+       y="-135.32001"
        font-family="Times, serif"
        font-size="12px"
        fill="#66c2a5"
@@ -173,53 +173,70 @@
   <g
      id="edge2"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title9">&lt;a&gt;-&gt;&lt;a&gt;_v</title>
+       id="title9">2'-&gt;2'_v</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 177.64,-56.92 c 4.38,0 9.18,0 13.77,0"
+       d="m 206.33,-133.72 c 8.05,-0.89 17.84,-1.98 26.4,-2.93"
        id="path9" />
   </g>
   <g
-     id="node4"
+     id="node5"
      class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title10">&lt;v&gt;</title>
+       id="title10">3'</title>
     <circle
        fill="none"
        stroke="#000000"
-       cx="265.42001"
-       cy="-57.919998"
+       cx="319.45999"
+       cy="-142.92"
        id="ellipse10"
        r="16.92" />
     <text
        text-anchor="middle"
-       x="265.42001"
-       y="-54.919998"
+       x="319.45999"
+       y="-139.92"
        font-family="sans-serif"
        font-size="10px"
-       id="text10">2</text>
+       id="text10">3'</text>
     <text
        text-anchor="middle"
-       x="244.05"
-       y="-32"
+       x="298.09"
+       y="-117"
        font-family="sans-serif"
        font-size="10px"
        id="text11">s2</text>
   </g>
   <g
-     id="node8"
-     class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     id="edge3"
+     class="edge"
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title11">&lt;v&gt;_c</title>
+       id="title11">2'_v-&gt;3'</title>
+    <path
+       fill="none"
+       stroke="#000000"
+       d="m 275.6,-140.21 c 5.96,-0.37 12.52,-0.79 18.69,-1.18"
+       id="path11" />
+    <polygon
+       fill="#000000"
+       stroke="#000000"
+       points="294.15,-141.38 294.15,-141.38 298.86,-141.68 294.35,-138.24 301.14,-141.82 293.95,-144.53 298.86,-141.68 294.15,-141.38 "
+       id="polygon11" />
+  </g>
+  <g
+     id="node7"
+     class="node"
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
+    <title
+       id="title12">3'_c</title>
     <text
        text-anchor="middle"
-       x="317.94"
-       y="-55.32"
+       x="319.45999"
+       y="-86.32"
        font-family="Times, serif"
        font-size="12px"
        fill="#66c2a5"
@@ -228,143 +245,126 @@
   <g
      id="edge6"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title12">&lt;v&gt;-&gt;&lt;v&gt;_c</title>
+       id="title13">3'-&gt;3'_c</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 282.68,-58.24 c 4.38,-0.09 9.18,-0.18 13.77,-0.27"
-       id="path12" />
-  </g>
-  <g
-     id="node5"
-     class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
-    <title
-       id="title13">&lt;c&gt;</title>
-    <circle
-       fill="#fc8d62"
-       stroke="#000000"
-       cx="374.45999"
-       cy="-59.919998"
-       id="ellipse13"
-       r="16.92" />
-    <circle
-       fill="none"
-       stroke="#000000"
-       cx="374.45999"
-       cy="-59.919998"
-       id="ellipse14"
-       r="20.92" />
-    <text
-       text-anchor="middle"
-       x="374.45999"
-       y="-56.919998"
-       font-family="sans-serif"
-       font-size="10px"
-       id="text14">3</text>
-    <text
-       text-anchor="middle"
-       x="349.09"
-       y="-30"
-       font-family="sans-serif"
-       font-size="10px"
-       id="text15">s3</text>
-  </g>
-  <g
-     id="node9"
-     class="node"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
-    <title
-       id="title15">&lt;c&gt;_</title>
-    <text
-       text-anchor="middle"
-       x="430.98001"
-       y="-28.32"
-       font-family="Times, serif"
-       font-size="12px"
-       fill="#66c2a5"
-       id="text16">χ | 1.0</text>
-  </g>
-  <g
-     id="edge8"
-     class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
-    <title
-       id="title16">&lt;c&gt;-&gt;&lt;c&gt;_</title>
-    <path
-       fill="none"
-       stroke="#000000"
-       d="m 393.61,-50.6 c 5.08,2.61 10.64,5.47 15.84,8.14"
-       id="path16" />
-  </g>
-  <g
-     id="edge3"
-     class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
-    <title
-       id="title17">&lt;a&gt;_v-&gt;&lt;v&gt;</title>
-    <path
-       fill="none"
-       stroke="#000000"
-       d="m 234.45,-57.33 c 1.86,-0.03 3.76,-0.07 5.65,-0.11"
-       id="path17" />
-    <polygon
-       fill="#000000"
-       stroke="#000000"
-       points="240.01,-57.44 240.01,-57.44 244.72,-57.53 240.07,-54.29 247.01,-57.58 239.94,-60.59 244.72,-57.53 240.01,-57.44 "
-       id="polygon17" />
+       d="m 319.46,-125.59 c 0,7.2 0,14.4 0,21.59"
+       id="path13" />
   </g>
   <g
      id="edge5"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title18">_a-&gt;&lt;a&gt;</title>
+       id="title14">_a-&gt;2'</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 129.41,-55.14 c 1.86,-0.11 3.76,-0.22 5.65,-0.34"
-       id="path18" />
+       d="m 145.2,-127.85 c 5.96,-0.57 12.52,-1.19 18.69,-1.78"
+       id="path14" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="134.98,-55.47 134.98,-55.47 139.69,-55.75 135.17,-52.33 141.97,-55.89 134.79,-58.62 139.69,-55.75 134.98,-55.47 "
-       id="polygon18" />
+       points="163.77,-129.61 163.77,-129.61 168.47,-130.06 164.07,-126.48 170.74,-130.28 163.48,-132.75 168.47,-130.06 163.77,-129.61 "
+       id="polygon14" />
+  </g>
+  <g
+     id="node8"
+     class="node"
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
+    <title
+       id="title15">4'</title>
+    <circle
+       fill="#fc8d62"
+       stroke="#000000"
+       cx="319.45999"
+       cy="-32.919998"
+       id="ellipse15"
+       r="16.92" />
+    <circle
+       fill="none"
+       stroke="#000000"
+       cx="319.45999"
+       cy="-32.919998"
+       id="ellipse16"
+       r="20.92" />
+    <text
+       text-anchor="middle"
+       x="319.45999"
+       y="-29.92"
+       font-family="sans-serif"
+       font-size="10px"
+       id="text16">4'</text>
+    <text
+       text-anchor="middle"
+       x="294.09"
+       y="-3"
+       font-family="sans-serif"
+       font-size="10px"
+       id="text17">s3</text>
   </g>
   <g
      id="edge7"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title19">&lt;v&gt;_c-&gt;&lt;c&gt;</title>
+       id="title17">3'_c-&gt;4'</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 339.24,-59.29 c 2.01,-0.04 4.08,-0.08 6.15,-0.12"
-       id="path19" />
+       d="m 319.46,-75.73 c 0,4.47 0,8.93 0,13.4"
+       id="path17" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="345.1,-59.4 345.1,-59.4 349.82,-59.49 345.16,-56.25 352.1,-59.53 345.05,-62.55 349.82,-59.49 345.1,-59.4 "
-       id="polygon19" />
+       points="319.46,-62.51 319.46,-62.51 319.46,-57.8 316.31,-62.51 319.46,-55.51 322.61,-62.51 319.46,-57.8 319.46,-62.51 "
+       id="polygon17" />
+  </g>
+  <g
+     id="node9"
+     class="node"
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
+    <title
+       id="title18">4'_</title>
+    <text
+       text-anchor="middle"
+       x="189.06"
+       y="-71.32"
+       font-family="Times, serif"
+       font-size="12px"
+       fill="#66c2a5"
+       id="text18">χ | 1.0</text>
+  </g>
+  <g
+     id="edge8"
+     class="edge"
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
+    <title
+       id="title19">4'-&gt;4'_</title>
+    <path
+       fill="none"
+       stroke="#000000"
+       d="M 299.05,-39.27 C 275.14,-47.09 234.73,-60.31 210.4,-68.26"
+       id="path19" />
   </g>
   <g
      id="edge9"
      class="edge"
-     transform="matrix(1.3410638,0,0,1.3410638,3.3996234,109.08213)">
+     transform="matrix(1.9851961,0,0,1.9851961,5.0325116,318.30634)">
     <title
-       id="title20">&lt;c&gt;_-&gt;</title>
+       id="title20">4'_-&gt;</title>
     <path
        fill="none"
        stroke="#000000"
-       d="m 409.46,-23.82 c -22.01,7.95 -58.18,18.9 -90.52,18.9 -159.56,0 -159.56,0 -159.56,0 -28.22,0 -59.67,-8.64 -80.32,-15.55"
+       d="M 167.68,-79.2 C 145.86,-83.79 111.27,-91.06 88.19,-95.91"
        id="path20" />
     <polygon
        fill="#000000"
        stroke="#000000"
-       points="79.21,-20.42 79.21,-20.42 74.75,-21.97 80.24,-23.4 72.59,-22.71 78.18,-17.45 74.75,-21.97 79.21,-20.42 "
+       points="88.3,-95.88 88.3,-95.88 83.68,-96.85 88.95,-98.97 81.45,-97.32 87.65,-92.8 83.68,-96.85 88.3,-95.88 "
        id="polygon20" />
   </g>
 </svg>

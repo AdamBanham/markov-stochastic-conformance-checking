@@ -11,21 +11,21 @@ digraph motivated_example_02_left {
     node [width=0.47, height=0.47, fixedsize=true, fontname="sans-serif",fontsize=10];
     edge [arrowsize=0.7,arrowhead=vee];
 	"&lt;a,v,c&gt;" [label="&lt;a,v,c&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
-	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
 	"&lt;a,v&gt;" [label="&lt;a,v&gt;" shape=circle xlabel=s2]
 	"&lt;a&gt;" [label="&lt;a&gt;" shape=circle xlabel=s1]
+	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
 	start -> "&epsilon;"
-	"&lt;a,v,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;a,v,c&gt;" -> "&lt;a,v,c&gt;_&chi;" [dir=none]
-	"&lt;a,v,c&gt;_&chi;" -> "&epsilon;"
-	"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&epsilon;" -> "&epsilon;_a" [dir=none]
-	"&epsilon;_a" -> "&lt;a&gt;"
 	"&lt;a,v&gt;_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
 	"&lt;a,v&gt;" -> "&lt;a,v&gt;_c" [dir=none]
 	"&lt;a,v&gt;_c" -> "&lt;a,v,c&gt;"
 	"&lt;a&gt;_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
 	"&lt;a&gt;" -> "&lt;a&gt;_v" [dir=none]
 	"&lt;a&gt;_v" -> "&lt;a,v&gt;"
+	"&lt;a,v,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&lt;a,v,c&gt;" -> "&lt;a,v,c&gt;_&chi;" [dir=none]
+	"&lt;a,v,c&gt;_&chi;" -> "&epsilon;"
+	"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"&epsilon;" -> "&epsilon;_a" [dir=none]
+	"&epsilon;_a" -> "&lt;a&gt;"
 }
