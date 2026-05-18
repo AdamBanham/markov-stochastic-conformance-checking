@@ -6,15 +6,6 @@ from markov import (
 )
 from mov_example_one import create_model_net
 from mov_example_two import create_log_one_net, create_log_two_net
-from discover import discover_chain_from_log
-from measure import (
-    compute_stochastic_entropy_precision,
-    compute_stochastic_entropy_recall
-)
-from pmkoalas.dtlog import convert
-from pmkoalas.simple import Trace
-from pmkoalas._logging import setLevel
-# setLevel('INFO')
 
 
 def create():
