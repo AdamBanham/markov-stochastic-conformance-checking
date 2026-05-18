@@ -18,13 +18,20 @@ def proc(label: str) -> str:
 @dataclass
 class MarkovState:
     trace: Trace
+    _override_name: str = None 
 
     def __hash__(self) -> int:
-        return hash(self.name)
+        return hash(str(self.trace))
 
     @property
     def name(self):
+        if self._override_name is not None:
+            return self._override_name
         return str(self.trace)
+    
+    @name.setter
+    def name(self, value):
+        self._override_name = value
 
     def __repr__(self) -> str:
         return self.name
@@ -35,7 +42,7 @@ class MarkovState:
         return False
 
     def dot_label(self, top_bot=True) -> str:
-        return proc(str(self.trace))
+        return proc(str(self.name))
 
     def dot_shape(self) -> str:
         return "circle"
@@ -291,7 +298,7 @@ class IntersectedFiniteLabelledMarkovChain(FiniteLabelledMarkovChain):
         right_net: FiniteLabelledMarkovChain,
         keep_traversable: bool = True,
         keep_dead_states: bool = False,
-        allow_optimisation: bool = True
+        allow_optimisation: bool = True,
     ):
         super().__init__()
 
@@ -350,7 +357,7 @@ class IntersectedFiniteLabelledMarkovChain(FiniteLabelledMarkovChain):
                 except ValueError:
                     continue
                 try:
-                    right_state =  self._right_net.moves_to(state.right, letter)
+                    right_state = self._right_net.moves_to(state.right, letter)
                 except ValueError:
                     continue
                 new_state = IntersectedMarkovState(
@@ -496,7 +503,7 @@ class IntersectedFiniteLabelledMarkovChain(FiniteLabelledMarkovChain):
                 self._transitions[curr] = spawn_moves
                 self._counting[curr] = {}
                 queue += spawned
-        
+
     def probability(self, state: IntersectedMarkovState, word: str) -> float:
         """
         Computes the probability of transition from the given state, with
@@ -644,7 +651,7 @@ def intersect_nets(
         right_net,
         keep_traversable=only_keep_traversable_states,
         keep_dead_states=keep_dead_states,
-        allow_optimisation=allow_optimisation
+        allow_optimisation=allow_optimisation,
     )
 
     return ret
@@ -971,7 +978,16 @@ def convet_net_to_dot(
     dot = Digraph(net_name, engine="dot", body=digraph_body)
 
     top_bot = rankdir != "LR"
+    seen = set()
+    queue = []
 
+    # add pointer to start
+    dot.node(
+        "start", shape="point", width="0.1", height="0.1", xlabel="start", label=""
+    )
+    dot.edge("start", proc(str(net._starting)))
+
+    # add acepting states
     for fstate in net._accepting:
         if fstate != net._starting:
             dot.node(
@@ -996,7 +1012,34 @@ def convet_net_to_dot(
                 penwidth="1" if fstate.dot_shape() != "Mrecord" else "3",
             )
 
-    for state in set(net._states).difference(set(net._accepting)):
+        # add to queue
+        seen.add(fstate.name)
+        for action in net.actions_from(fstate):
+            next_state = net.moves_to(fstate, action)
+            if next_state not in seen:
+                queue.append(next_state)
+
+    # add subgraph to track near exits
+    subgraph_body = """
+    rank=same;
+    """
+    edges_from_and_to_start = Digraph(
+        name="near_entry_exit", 
+        engine="dot", 
+        graph_attr={"rank" : "same"},
+        node_attr={
+            "width" : f"{size}", 
+            "height" : f"{size}", 
+            "fixedsize" : "true", 
+            "fontname" : "sans-serif",
+            "fontsize" : f"{node_fontsize}"
+        }
+    )
+
+    # walk to others
+    while len(queue) > 0:
+        state = queue.pop(0)
+        print(f"{len(queue)=} | {state=}")
         if (
             isinstance(state, IntersectedMarkovState)
             and state.left == DEAD_STATE
@@ -1025,7 +1068,7 @@ def convet_net_to_dot(
         elif state != net._starting:
             dot.node(
                 proc(str(state)),
-                shape=state.dot_shape(),
+                shape="circle" if state.dot_shape() != "Mrecord" else "Mrecord",
                 label=state.dot_label(top_bot),
                 xlabel=f"s{identifiers[state]}" if identifiers else "",
             )
@@ -1040,11 +1083,14 @@ def convet_net_to_dot(
                 label=state.dot_label(top_bot),
             )
 
-    dot.node(
-        "start", shape="point", width="0.1", height="0.1", xlabel="start", label=""
-    )
-    dot.edge("start", proc(str(net._starting)))
+        # add to queue
+        seen.add(state.name)
+        for action in net.actions_from(state):
+            next_state = net.moves_to(state, action)
+            if next_state.name not in seen:
+                queue.append(next_state)
 
+    # add edges to net
     for state in net._states:
         for symbol in net.actions_from(state):
 
@@ -1055,7 +1101,13 @@ def convet_net_to_dot(
                 scaler = 12.0 / transition_fontsize
                 width = 0.6 / scaler
                 height = 0.4 / scaler
-                dot.node(
+
+                # work out if the edge goes in the edge rank subgraph or not
+                label_node_graph = dot 
+                if (state == net._starting or end == net._starting):
+                    label_node_graph = edges_from_and_to_start
+
+                label_node_graph.node(
                     f"{proc(str(state))}_{symbol}",
                     label=(
                         f"{symbol} | {round(prob,rounding)}"
@@ -1091,6 +1143,10 @@ def convet_net_to_dot(
                 continue
             except Exception as e:
                 print(f"Unexpected error :: {e}")
+
+    # add label nodes for edges
+    dot.subgraph(edges_from_and_to_start)
+
     dot.render(filename=file_name, directory=directory)
     return dot
 
