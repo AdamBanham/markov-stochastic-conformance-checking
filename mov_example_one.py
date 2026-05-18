@@ -6,16 +6,14 @@ from markov import (
     STOP_SYMBOL,
     compute_long_run_proportions
 )
-from discover import discover_chain_from_log
 
 from pmkoalas.simple import Trace
 
 def create_model_net() -> FiniteLabelledMarkovChain:
     example_net = FiniteLabelledMarkovChain()
-    state_a =  MarkovState("a")
-    state_v = MarkovState("v")
-    state_c = MarkovState("c")
-    state_f = MarkovState("4")
+    state_a =  MarkovState("2")
+    state_v = MarkovState("3")
+    state_c = MarkovState("4")
 
     example_net._alphabet.add("a")
     example_net._alphabet.add("v")
@@ -31,9 +29,6 @@ def create_model_net() -> FiniteLabelledMarkovChain:
     example_net._states.add(
        state_c
     )
-    # example_net._states.add(
-    #     state_f
-    # )
     
     example_net._accepting.add(state_c)
     
@@ -44,9 +39,6 @@ def create_model_net() -> FiniteLabelledMarkovChain:
     example_net._transitions[state_v] = {
         'c' : state_c, 'f': state_a
     }
-    # example_net._transitions[state_f] = {
-    #     'a': state_a
-    # }
     example_net._transitions[state_c] = {
         STOP_SYMBOL : example_net._starting,
         
@@ -58,9 +50,6 @@ def create_model_net() -> FiniteLabelledMarkovChain:
     }
     example_net._counting[state_v] = {
         'c' : 1, 'f': 1
-    }
-    example_net._counting[state_f] = {
-        'a' : 1
     }
     example_net._counting[state_c] = {
         STOP_SYMBOL: 1

@@ -1,0 +1,35 @@
+digraph motivated_example_03_model_l1 {
+
+    ranksep=0.2;
+    nodesep=0.10;
+    rankdir=LR;
+    mclimit=10000;
+    minlen=4;
+    dpi=300;
+    pad=0.1;
+    margin=0.1;
+    node [width=0.65, height=0.65, fixedsize=true, fontname="sans-serif",fontsize=10];
+    edge [arrowsize=0.7,arrowhead=vee];
+	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
+	start -> "(L&amp;R)&epsilon;"
+	"L=4,R=4'." [label="{4}|{4'}" colorscheme=set28 fillcolor=2 penwidth=3 shape=Mrecord style=filled xlabel=s3]
+	"(L&amp;R)&epsilon;" [label="{&epsilon;}" colorscheme=set28 fillcolor=1 shape=Mrecord style=filled xlabel=s0]
+	"L=2,R=2'." [label="{2}|{2'}" shape=Mrecord xlabel=s1]
+	"L=3,R=3'." [label="{3}|{3'}" shape=Mrecord xlabel=s2]
+	"L=4,R=4'." -> "L=4,R=4'._&chi;" [dir=none]
+	"L=4,R=4'._&chi;" -> "(L&amp;R)&epsilon;"
+	"L=2,R=2'._v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"L=2,R=2'." -> "L=2,R=2'._v" [dir=none]
+	"L=2,R=2'._v" -> "L=3,R=3'."
+	"L=3,R=3'._c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"L=3,R=3'." -> "L=3,R=3'._c" [dir=none]
+	"L=3,R=3'._c" -> "L=4,R=4'."
+	"(L&amp;R)&epsilon;" -> "(L&amp;R)&epsilon;_a" [dir=none]
+	"(L&amp;R)&epsilon;_a" -> "L=2,R=2'."
+	subgraph near_entry_exit {
+		graph [rank=same]
+		node [fixedsize=true fontname="sans-serif" fontsize=10 height=0.65 width=0.65]
+		"L=4,R=4'._&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+		"(L&amp;R)&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	}
+}

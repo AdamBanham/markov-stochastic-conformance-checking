@@ -8,24 +8,28 @@ digraph motivated_example_02_left {
     dpi=300;
     pad=0.1;
     margin=0.1;
-    node [width=0.47, height=0.47, fixedsize=true, fontname="sans-serif",fontsize=10];
+    node [width=0.55, height=0.55, fixedsize=true, fontname="sans-serif",fontsize=10];
     edge [arrowsize=0.7,arrowhead=vee];
-	"&lt;a,v,c&gt;" [label="&lt;a,v,c&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
-	"&lt;a,v&gt;" [label="&lt;a,v&gt;" shape=circle xlabel=s2]
-	"&lt;a&gt;" [label="&lt;a&gt;" shape=circle xlabel=s1]
-	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
 	start -> "&epsilon;"
-	"&lt;a,v&gt;_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;a,v&gt;" -> "&lt;a,v&gt;_c" [dir=none]
-	"&lt;a,v&gt;_c" -> "&lt;a,v,c&gt;"
-	"&lt;a&gt;_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;a&gt;" -> "&lt;a&gt;_v" [dir=none]
-	"&lt;a&gt;_v" -> "&lt;a,v&gt;"
-	"&lt;a,v,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
-	"&lt;a,v,c&gt;" -> "&lt;a,v,c&gt;_&chi;" [dir=none]
-	"&lt;a,v,c&gt;_&chi;" -> "&epsilon;"
-	"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"4'" [label="4'" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
+	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
+	"2'" [label="2'" shape=circle xlabel=s1]
+	"3'" [label="3'" shape=circle xlabel=s2]
+	"2'_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"2'" -> "2'_v" [dir=none]
+	"2'_v" -> "3'"
 	"&epsilon;" -> "&epsilon;_a" [dir=none]
-	"&epsilon;_a" -> "&lt;a&gt;"
+	"&epsilon;_a" -> "2'"
+	"3'_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	"3'" -> "3'_c" [dir=none]
+	"3'_c" -> "4'"
+	"4'" -> "4'_&chi;" [dir=none]
+	"4'_&chi;" -> "&epsilon;"
+	subgraph near_entry_exit {
+		graph [rank=same]
+		node [fixedsize=true fontname="sans-serif" fontsize=10 height=0.55 width=0.55]
+		"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+		"4'_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=1 fontname="Times-Roman" fontsize=12 height=0.4 shape=plaintext style="rounded,dashed" width=0.6]
+	}
 }
