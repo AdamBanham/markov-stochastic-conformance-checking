@@ -987,6 +987,18 @@ def convet_net_to_dot(
     )
     dot.edge("start", proc(str(net._starting)))
 
+    # add starting
+    dot.node(
+        proc(str(net._starting)),
+        shape=net._starting.dot_shape(),
+        style="filled",
+        colorscheme="set28",
+        fillcolor="1",
+        xlabel=f"s{identifiers[net._starting]}" if identifiers else "",
+        label=net._starting.dot_label(top_bot),
+    )
+    seen.add(net._starting.name)
+
     # add acepting states
     for fstate in net._accepting:
         if fstate != net._starting:
@@ -1016,7 +1028,7 @@ def convet_net_to_dot(
         seen.add(fstate.name)
         for action in net.actions_from(fstate):
             next_state = net.moves_to(fstate, action)
-            if next_state not in seen:
+            if next_state.name not in seen:
                 queue.append(next_state)
 
     # add subgraph to track near exits
@@ -1122,7 +1134,7 @@ def convet_net_to_dot(
                     style="rounded,dashed",
                     colorscheme="set28",
                     fillcolor="7" if prob > 0 else "8",
-                    fontcolor="1" if prob > 0 else "8",
+                    fontcolor="black",
                 )
 
                 # add connecting arc to the
