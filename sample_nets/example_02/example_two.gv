@@ -8,40 +8,42 @@ digraph example_two {
     dpi=300;
     pad=0.1;
     margin=0.1;
-    node [width=0.65, height=0.65, fixedsize=true, fontname="sans-serif",fontsize=16];
+    node [width=0.85, height=0.85, fixedsize=true, fontname="sans-serif",fontsize=16];
     edge [arrowsize=0.7,arrowhead=vee];
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
 	start -> "&epsilon;"
 	"&epsilon;" [label="&epsilon;" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
-	"&lt;a,c,b&gt;" [label="&lt;a,c,b&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s5]
 	"&lt;a,b,c&gt;" [label="&lt;a,b,c&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s4]
+	"&lt;a,c,b&gt;" [label="&lt;a,c,b&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s5]
 	"&lt;a,b&gt;" [label="&lt;a,b&gt;" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s2]
-	"&lt;a,c,b&gt;" -> "&lt;a,c,b&gt;_&chi;" [dir=none]
-	"&lt;a,c,b&gt;_&chi;" -> "&epsilon;"
+	"&lt;a&gt;" [label="&lt;a&gt;" shape=circle xlabel=s1]
+	"&lt;a,c&gt;" [label="&lt;a,c&gt;" shape=circle xlabel=s3]
 	"&lt;a,b&gt;" -> "&lt;a,b&gt;_&chi;" [dir=none]
 	"&lt;a,b&gt;_&chi;" -> "&epsilon;"
-	"&lt;a,b&gt;_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
+	"&lt;a,b&gt;_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	"&lt;a,b&gt;" -> "&lt;a,b&gt;_c" [dir=none]
 	"&lt;a,b&gt;_c" -> "&lt;a,b,c&gt;"
 	"&epsilon;" -> "&epsilon;_a" [dir=none]
 	"&epsilon;_a" -> "&lt;a&gt;"
-	"&lt;a&gt;_b" [label="b | 0.632" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"&lt;a&gt;" -> "&lt;a&gt;_b" [dir=none]
-	"&lt;a&gt;_b" -> "&lt;a,b&gt;"
-	"&lt;a&gt;_c" [label="c | 0.368" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
+	"&lt;a&gt;_c" [label="c | 0.368" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	"&lt;a&gt;" -> "&lt;a&gt;_c" [dir=none]
 	"&lt;a&gt;_c" -> "&lt;a,c&gt;"
-	"&lt;a,c&gt;_b" [label="b | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"&lt;a,c&gt;" -> "&lt;a,c&gt;_b" [dir=none]
-	"&lt;a,c&gt;_b" -> "&lt;a,c,b&gt;"
+	"&lt;a&gt;_b" [label="b | 0.632" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"&lt;a&gt;" -> "&lt;a&gt;_b" [dir=none]
+	"&lt;a&gt;_b" -> "&lt;a,b&gt;"
 	"&lt;a,b,c&gt;" -> "&lt;a,b,c&gt;_&chi;" [dir=none]
 	"&lt;a,b,c&gt;_&chi;" -> "&epsilon;"
+	"&lt;a,c&gt;_b" [label="b | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"&lt;a,c&gt;" -> "&lt;a,c&gt;_b" [dir=none]
+	"&lt;a,c&gt;_b" -> "&lt;a,c,b&gt;"
+	"&lt;a,c,b&gt;" -> "&lt;a,c,b&gt;_&chi;" [dir=none]
+	"&lt;a,c,b&gt;_&chi;" -> "&epsilon;"
 	subgraph near_entry_exit {
 		graph [rank=same]
-		node [fixedsize=true fontname="sans-serif" fontsize=16 height=0.65 width=0.65]
-		"&lt;a,c,b&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-		"&lt;a,b&gt;_&chi;" [label="&chi; | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-		"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-		"&lt;a,b,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
+		node [fixedsize=true fontname="sans-serif" fontsize=16 height=0.85 width=0.85]
+		"&lt;a,b&gt;_&chi;" [label="&chi; | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"&epsilon;_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"&lt;a,b,c&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"&lt;a,c,b&gt;_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	}
 }

@@ -1,6 +1,6 @@
 digraph motivated_example_01 {
 
-    ranksep=0.4;
+    ranksep=0.6;
     nodesep=0.10;
     rankdir=LR;
     mclimit=10000;
@@ -8,31 +8,31 @@ digraph motivated_example_01 {
     dpi=300;
     pad=0.1;
     margin=0.1;
-    node [width=0.47, height=0.47, fixedsize=true, fontname="sans-serif",fontsize=10];
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=16];
     edge [arrowsize=0.7,arrowhead=vee];
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
 	start -> 1
-	4 [label=4 colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
 	1 [label=1 colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
+	4 [label=4 colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
 	2 [label=2 shape=circle xlabel=s1]
 	3 [label=3 shape=circle xlabel=s2]
-	"2_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
-	2 -> "2_v" [dir=none]
-	"2_v" -> 3
 	1 -> "1_a" [dir=none]
 	"1_a" -> 2
-	"3_f" [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
-	3 -> "3_f" [dir=none]
-	"3_f" -> 2
-	"3_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
-	3 -> "3_c" [dir=none]
-	"3_c" -> 4
 	4 -> "4_&chi;" [dir=none]
 	"4_&chi;" -> 1
+	"2_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	2 -> "2_v" [dir=none]
+	"2_v" -> 3
+	"3_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	3 -> "3_c" [dir=none]
+	"3_c" -> 4
+	"3_f" [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	3 -> "3_f" [dir=none]
+	"3_f" -> 2
 	subgraph near_entry_exit {
 		graph [rank=same]
-		node [fixedsize=true fontname="sans-serif" fontsize=10 height=0.47 width=0.47]
-		"1_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
-		"4_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=14 height=0.46666666666666673 shape=plaintext style="rounded,dashed" width=0.7000000000000001]
+		node [fixedsize=true fontname="sans-serif" fontsize=16 height=0.8 width=0.8]
+		"1_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"4_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	}
 }

@@ -28,8 +28,8 @@ def create():
                           min_len=4, mclimit=100,
                           ranksep=0.8,
                           node_fontsize=16, 
-                          transition_fontsize=16,
-                          size=0.65,
+                          transition_fontsize=20,
+                          size=0.85,
                           identifiers=ids,
                           directory=dump_directory)
 

@@ -999,6 +999,11 @@ def convet_net_to_dot(
     )
     seen.add(net._starting.name)
 
+    for action in net.actions_from(net._starting):
+        next_state = net.moves_to(net._starting, action)
+        if next_state.name not in seen and next_state not in queue:
+            queue.append(next_state)
+
     # add acepting states
     for fstate in net._accepting:
         if fstate != net._starting:
@@ -1028,7 +1033,7 @@ def convet_net_to_dot(
         seen.add(fstate.name)
         for action in net.actions_from(fstate):
             next_state = net.moves_to(fstate, action)
-            if next_state.name not in seen:
+            if next_state.name not in seen and next_state not in queue:
                 queue.append(next_state)
 
     # add subgraph to track near exits
@@ -1051,6 +1056,10 @@ def convet_net_to_dot(
     # walk to others
     while len(queue) > 0:
         state = queue.pop(0)
+
+        if state.name in seen:
+            continue
+
         print(f"{len(queue)=} | {state=}")
         if (
             isinstance(state, IntersectedMarkovState)
@@ -1099,7 +1108,7 @@ def convet_net_to_dot(
         seen.add(state.name)
         for action in net.actions_from(state):
             next_state = net.moves_to(state, action)
-            if next_state.name not in seen:
+            if next_state.name not in seen and next_state not in queue:
                 queue.append(next_state)
 
     # add edges to net

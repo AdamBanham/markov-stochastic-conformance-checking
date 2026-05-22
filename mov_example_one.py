@@ -54,6 +54,9 @@ def create_model_net() -> FiniteLabelledMarkovChain:
     example_net._counting[state_c] = {
         STOP_SYMBOL: 1
     }
+
+    example_net._starting.name = "1"
+
     return example_net
 
 def create():
@@ -69,8 +72,10 @@ def create():
     ids = walk_and_assign_identifies(example_net)
     _ = convet_net_to_dot(example_net, 3, "LR", "motivated_example_01",
                           min_len=4, mclimit=10000,
-                          ranksep=0.4,
-                          transition_fontsize=14,
+                          ranksep=0.6,
+                          transition_fontsize=20,
+                          node_fontsize=16,
+                          size=0.8,
                           identifiers=ids,
                           directory=dump_directory)
     

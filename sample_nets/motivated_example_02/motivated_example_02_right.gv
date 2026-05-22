@@ -8,48 +8,43 @@ digraph motivated_example_02_right {
     dpi=300;
     pad=0.1;
     margin=0.1;
-    node [width=0.6, height=0.6, fixedsize=true, fontname="sans-serif",fontsize=16];
+    node [width=0.8, height=0.8, fixedsize=true, fontname="sans-serif",fontsize=16];
     edge [arrowsize=0.7,arrowhead=vee];
 	start [label="" height=0.1 shape=point width=0.1 xlabel=start]
 	start -> "1''"
-	"7''" [label="7''" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s6]
+	"1''" [label="1''" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
 	"4''" [label="4''" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s3]
-	"1''" [label="1''" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
-	"1''" [label="1''" colorscheme=set28 fillcolor=1 shape=circle style=filled xlabel=s0]
-	"2''" [label="2''" shape=circle xlabel=s1]
+	"7''" [label="7''" colorscheme=set28 fillcolor=2 penwidth=1 shape=doublecircle style=filled xlabel=s6]
 	"2''" [label="2''" shape=circle xlabel=s1]
 	"3''" [label="3''" shape=circle xlabel=s2]
-	"3''" [label="3''" shape=circle xlabel=s2]
-	"5''" [label="5''" shape=circle xlabel=s4]
 	"5''" [label="5''" shape=circle xlabel=s4]
 	"6''" [label="6''" shape=circle xlabel=s5]
-	"6''" [label="6''" shape=circle xlabel=s5]
-	"7''" -> "7''_&chi;" [dir=none]
-	"7''_&chi;" -> "1''"
-	"4''" -> "4''_&chi;" [dir=none]
-	"4''_&chi;" -> "1''"
-	"2''_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"2''" -> "2''_v" [dir=none]
-	"2''_v" -> "3''"
-	"6''_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"6''" -> "6''_c" [dir=none]
-	"6''_c" -> "7''"
-	"1''" -> "1''_a" [dir=none]
-	"1''_a" -> "2''"
-	"5''_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"5''" -> "5''_v" [dir=none]
-	"5''_v" -> "6''"
-	"3''_f" [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-	"3''" -> "3''_f" [dir=none]
-	"3''_f" -> "5''"
-	"3''_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
+	"3''_c" [label="c | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	"3''" -> "3''_c" [dir=none]
 	"3''_c" -> "4''"
+	"3''_f" [label="f | 0.5" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"3''" -> "3''_f" [dir=none]
+	"3''_f" -> "5''"
+	"4''" -> "4''_&chi;" [dir=none]
+	"4''_&chi;" -> "1''"
+	"2''_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"2''" -> "2''_v" [dir=none]
+	"2''_v" -> "3''"
+	"1''" -> "1''_a" [dir=none]
+	"1''_a" -> "2''"
+	"5''_v" [label="v | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"5''" -> "5''_v" [dir=none]
+	"5''_v" -> "6''"
+	"7''" -> "7''_&chi;" [dir=none]
+	"7''_&chi;" -> "1''"
+	"6''_c" [label="c | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+	"6''" -> "6''_c" [dir=none]
+	"6''_c" -> "7''"
 	subgraph near_entry_exit {
 		graph [rank=same]
-		node [fixedsize=true fontname="sans-serif" fontsize=16 height=0.6 width=0.6]
-		"7''_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-		"4''_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
-		"1''_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=16 height=0.5333333333333333 shape=plaintext style="rounded,dashed" width=0.7999999999999999]
+		node [fixedsize=true fontname="sans-serif" fontsize=16 height=0.8 width=0.8]
+		"4''_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"1''_a" [label="a | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
+		"7''_&chi;" [label="&chi; | 1.0" colorscheme=set28 fillcolor=7 fontcolor=black fontname="Times-Roman" fontsize=20 height=0.6666666666666667 shape=plaintext style="rounded,dashed" width=1.0]
 	}
 }

@@ -13,6 +13,8 @@ from pmkoalas.dtlog import convert
 from pmkoalas.simple import Trace
 # setLevel('INFO')
 
+from time import sleep
+
 def create_log_one_net() -> FiniteLabelledMarkovChain:
     log = convert(*["a v c"]) 
     net = discover_chain_from_log(log)
@@ -68,6 +70,18 @@ def create():
     log_one = create_log_one_net()
     print("left net long run :: ", compute_long_run_proportions(log_one))
 
+    # save out graphs
+    ids = walk_and_assign_identifies(log_one)
+    _ = convet_net_to_dot(log_one, 3, "LR", "motivated_example_02_left",
+                          min_len=4, mclimit=10000,
+                          ranksep=0.6,
+                          transition_fontsize=20,
+                          node_fontsize=16,
+                          size=0.8,
+                          identifiers=ids,
+                          directory=dump_directory)
+    
+
     log_two = create_log_two_net() 
     log_two_runs, _ = compute_long_run_proportions(log_two)
     log_two_runs = dict(
@@ -76,24 +90,13 @@ def create():
     )
     print("right net long run :: ", log_two_runs)
 
-    # save out graphs
-    ids = walk_and_assign_identifies(log_one)
-    _ = convet_net_to_dot(log_one, 3, "LR", "motivated_example_02_left",
-                          min_len=4, mclimit=10000,
-                          ranksep=0.6,
-                          transition_fontsize=16,
-                          node_fontsize=16,
-                          size=0.6,
-                          identifiers=ids,
-                          directory=dump_directory)
-    
     ids = walk_and_assign_identifies(log_two)
     _ = convet_net_to_dot(log_two, 3, "LR", "motivated_example_02_right",
                           min_len=4, mclimit=10000,
-                          transition_fontsize=16,
-                          node_fontsize=16,
                           ranksep=0.6,
-                          size=0.6,
+                          transition_fontsize=20,
+                          node_fontsize=16,
+                          size=0.8,
                           identifiers=ids,
                           directory=dump_directory)
     
