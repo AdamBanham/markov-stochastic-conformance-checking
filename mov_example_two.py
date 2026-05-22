@@ -27,6 +27,8 @@ def create_log_one_net() -> FiniteLabelledMarkovChain:
         if state.trace in state_mapping:
             state.name = state_mapping[state.trace]
 
+    net._starting.name = "1'"
+
     return net
 
 def create_log_two_net():
@@ -47,6 +49,8 @@ def create_log_two_net():
     for state in net._states.difference(set([net._starting])):
         if state.trace in state_mapping:
             state.name = state_mapping[state.trace] + suffix
+
+    net._starting.name = "1''"
 
     return net
 
@@ -76,16 +80,20 @@ def create():
     ids = walk_and_assign_identifies(log_one)
     _ = convet_net_to_dot(log_one, 3, "LR", "motivated_example_02_left",
                           min_len=4, mclimit=10000,
-                          ranksep=0.2,
-                          size=0.55,
+                          ranksep=0.6,
+                          transition_fontsize=16,
+                          node_fontsize=16,
+                          size=0.6,
                           identifiers=ids,
                           directory=dump_directory)
     
     ids = walk_and_assign_identifies(log_two)
     _ = convet_net_to_dot(log_two, 3, "LR", "motivated_example_02_right",
                           min_len=4, mclimit=10000,
-                          ranksep=0.3,
-                          size=0.55,
+                          transition_fontsize=16,
+                          node_fontsize=16,
+                          ranksep=0.6,
+                          size=0.6,
                           identifiers=ids,
                           directory=dump_directory)
     

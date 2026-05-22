@@ -69,7 +69,8 @@ def create():
     ids = walk_and_assign_identifies(example_net)
     _ = convet_net_to_dot(example_net, 3, "LR", "motivated_example_01",
                           min_len=4, mclimit=10000,
-                          ranksep=0.2,
+                          ranksep=0.4,
+                          transition_fontsize=14,
                           identifiers=ids,
                           directory=dump_directory)
     
