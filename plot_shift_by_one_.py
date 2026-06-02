@@ -7,7 +7,7 @@ from glob import glob
 dump_directory = join(".", "evaluation", "shift-by-one")
 
 
-stat_files = glob(join(dump_directory, "*_scores.json"))
+stat_files = glob(join(dump_directory, "*_scores_v2.json"))
 
 for stats in stat_files:
     json_data = json.load(open(stats, "r"))

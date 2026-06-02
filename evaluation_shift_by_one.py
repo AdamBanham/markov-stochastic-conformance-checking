@@ -31,9 +31,9 @@ set_int_max_str_digits(18000)
 
 LOG_FOLDER = join(".", "logs")
 EVAL_LOGS = [
-    # join(LOG_FOLDER, "road_fines.xes"),
+    join(LOG_FOLDER, "road_fines.xes"),
     # join(LOG_FOLDER, "sepsis.xes"),
-    join(LOG_FOLDER, "bpic_2020_permits.xes"),
+    # join(LOG_FOLDER, "bpic_2020_permits.xes"),
 ]
 # setLevel(INFO)
 
@@ -185,7 +185,7 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
             f.write(repr(sample))
 
         # compute window versions
-        for windows in range(1, 4, 2):
+        for windows in range(1, 8, 2):
             print(f"starting windowing with {windows}...")
 
             print("computing recall...")
@@ -240,13 +240,13 @@ def evaluation(log_paths: List[PathLike]):
             "n_variants": log.get_nvariants(),
             "swaps": swaps,
         }
-        with open(join(dump_directory, f"{log.get_name()}_stats.json"), "w") as f:
+        with open(join(dump_directory, f"{log.get_name()}_stats_v2.json"), "w") as f:
             f.write(dumps(stats, indent=4))
 
         # perform sampling
         info("performing sampling...")
         curves = sampling(log, 25, dump_directory=dump_directory)
-        with open(join(dump_directory, f"{log.get_name()}_scores.json"), "w") as f:
+        with open(join(dump_directory, f"{log.get_name()}_scores_v2.json"), "w") as f:
             f.write(dumps(curves, indent=4))
 
         info("Finished...")

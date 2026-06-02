@@ -91,18 +91,31 @@ def compute_stochastic_entropy_recall(
     info("Stochastic entropy recall using intersection of A X B...")
     recall = 1.000
     delta = 0.0
+    left_factor = 1 / (1 - left_probs[tr_right_net._starting])
+    right_factor = 1 / (1 - ab_probs[ab_example_net._starting])
+    
     for state in tr_left_net._states:
-        state_prob = left_probs[state]
+        if state == tr_left_net._starting:
+            continue
+
+        state_prob = left_factor * left_probs[state]
         info(f"processing left state :: {state} with probability :: {state_prob:.6f}")
+
         intersect_prob = 0.0
         for other in ab_example_net._states:
             if other.left != state:
                 continue
+            if other.right == tr_right_net._starting:
+                continue
+            
             info(f"processing intersection state :: {other} with probability :: {ab_probs[other]:.6f}")
             intersect_prob += ab_probs[other]
+        intersect_prob = right_factor * intersect_prob
+
         info(f"total intersect probability for left state :: {state} is :: {intersect_prob:.6f}")
         delta += min(abs(state_prob - intersect_prob), state_prob)
         info(f"delta is :: {delta:.6f}")
+
     recall = recall - delta
     info(f"recall was computed as :: {recall:.6f}")
     return float(recall), dump_thread
@@ -182,18 +195,31 @@ def compute_stochastic_entropy_precision(
     info("Stochastic entropy precision using intersection of B X A...")
     precision = 1.00
     delta = 0.0
+    left_factor = 1 / (1 - left_probs[tr_right_net._starting])
+    right_factor = 1 / (1 - ba_probs[ba_example_net._starting])
+
+    # work out the sum
     for state in tr_right_net._states:
-        state_prob = left_probs[state]
+        if state == tr_right_net._starting:
+            continue
+
+        state_prob = left_factor * left_probs[state]
         info(f"processing left state :: {state} with probability :: {state_prob:.3f}")
+        
         intersect_prob = 0.0
         for other in ba_example_net._states:
             if other.left != state:
                 continue
+            if other.right == tr_left_net._starting:
+                continue
             info(f"processing intersection state :: {other} with probability :: {ba_probs[other]:.3f}")
             intersect_prob += ba_probs[other]
+        intersect_prob = right_factor * intersect_prob
+        
         info(f"total intersect probability for left state :: {state} is :: {intersect_prob:.3f}")
         delta += max((state_prob - intersect_prob), 0.0)
         info(f"delta is :: {delta:.3f}")
+
     precision = precision - delta
     info(f"precision was computed as :: {precision:.3f}")
     return float(precision), dump_thread
