@@ -3,6 +3,7 @@ import json
 import pandas as pd
 from os.path import join
 from glob import glob
+from plotly.colors import hex_to_rgb
 
 dump_directory = join(".", "evaluation", "shift-by-one")
 
@@ -26,20 +27,32 @@ for stats in stat_files:
     df = pd.DataFrame(row_data, columns=["score", "measurement", "window", "sample"])
 
     # make plot
-    fig = px.scatter(
+    fig = px.line(
         df,
         x="sample",
         y="score",
         color="measurement",
         facet_col="measurement",
         symbol="window",
-        marginal_y="histogram",
+        line_dash='window',
+        # marginal_y="histogram",
         labels=dict(score="measurement", measurement="technique",
                     sample="% of log swapped out"),
         width=1000,
         height=275,
-        opacity=0.66
+        # opacity=0.66
     )
+
+    # Keep markers crisp while making connector lines less visually dominant.
+    for trace in fig.data:
+        base_color = trace.line.color or trace.marker.color
+        if isinstance(base_color, str) and base_color.startswith("#"):
+            r, g, b = hex_to_rgb(base_color)
+            trace.update(
+                line=dict(color=f"rgba({r},{g},{b},0.35)"),
+                marker=dict(color=f"rgba({r},{g},{b},1.0)")
+            )
+
     fig.update_xaxes(
         minallowed=-2, maxallowed=102, gridcolor='LightGray',
         zeroline=True, zerolinecolor='LightGray'

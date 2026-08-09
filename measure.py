@@ -91,7 +91,7 @@ def compute_stochastic_entropy_recall(
     info("Stochastic entropy recall using intersection of A X B...")
     recall = 1.000
     delta = 0.0
-    left_factor = 1 / (1 - left_probs[tr_right_net._starting])
+    left_factor = 1 / (1 - left_probs[tr_left_net._starting])
     right_factor = 1 / (1 - ab_probs[ab_example_net._starting])
     
     for state in tr_left_net._states:
@@ -113,7 +113,9 @@ def compute_stochastic_entropy_recall(
         intersect_prob = right_factor * intersect_prob
 
         info(f"total intersect probability for left state :: {state} is :: {intersect_prob:.6f}")
-        delta += min(abs(state_prob - intersect_prob), state_prob)
+        step = state_prob - intersect_prob
+        step = max(step, 0)
+        delta += step
         info(f"delta is :: {delta:.6f}")
 
     recall = recall - delta
@@ -159,9 +161,9 @@ def compute_stochastic_entropy_precision(
 
     # compute probs for left
     info("starting compute to left long run proportions...")
-    left_probs, eqs = compute_long_run_proportions(tr_right_net)
+    right_probs, eqs = compute_long_run_proportions(tr_right_net)
     info("B :: solved equations :: " + repr(eqs))
-    info("B :: long run proportions computed :: " + repr(left_probs))
+    info("B :: long run proportions computed :: " + repr(right_probs))
     info("finished compute to left long run proportions...")
 
     # compute distance between chains
@@ -195,7 +197,7 @@ def compute_stochastic_entropy_precision(
     info("Stochastic entropy precision using intersection of B X A...")
     precision = 1.00
     delta = 0.0
-    left_factor = 1 / (1 - left_probs[tr_right_net._starting])
+    left_factor = 1 / (1 - right_probs[tr_right_net._starting])
     right_factor = 1 / (1 - ba_probs[ba_example_net._starting])
 
     # work out the sum
@@ -203,7 +205,7 @@ def compute_stochastic_entropy_precision(
         if state == tr_right_net._starting:
             continue
 
-        state_prob = left_factor * left_probs[state]
+        state_prob = left_factor * right_probs[state]
         info(f"processing left state :: {state} with probability :: {state_prob:.3f}")
         
         intersect_prob = 0.0
@@ -217,7 +219,9 @@ def compute_stochastic_entropy_precision(
         intersect_prob = right_factor * intersect_prob
         
         info(f"total intersect probability for left state :: {state} is :: {intersect_prob:.3f}")
-        delta += max((state_prob - intersect_prob), 0.0)
+        step = state_prob - intersect_prob
+        step = max(step, 0)
+        delta += step
         info(f"delta is :: {delta:.3f}")
 
     precision = precision - delta

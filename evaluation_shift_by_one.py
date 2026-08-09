@@ -31,8 +31,8 @@ set_int_max_str_digits(18000)
 
 LOG_FOLDER = join(".", "logs")
 EVAL_LOGS = [
-    join(LOG_FOLDER, "road_fines.xes"),
-    # join(LOG_FOLDER, "sepsis.xes"),
+    # join(LOG_FOLDER, "road_fines.xes"),
+    join(LOG_FOLDER, "sepsis.xes"),
     # join(LOG_FOLDER, "bpic_2020_permits.xes"),
 ]
 # setLevel(INFO)
@@ -174,43 +174,47 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
         mkdir(samples_dir)
 
     # compute scores
-    for i, sample in enumerate(samples):
-        print(f"starting on sample {i} with size of {len(sample)}/{len(log)}...")
+    try:
+        for i, sample in enumerate(samples):
+            print(f"starting on sample {i} with size of {len(sample)}/{len(log)}...")
 
-        export_to_xes_simple(
-            join(samples_dir, f"s{i:02d}_event_log.xes"),
-            sample
-        )
-        with open(join(samples_dir, f"s{i:02d}_event_log.eval"), "w") as f:
-            f.write(repr(sample))
-
-        # compute window versions
-        for windows in range(1, 8, 2):
-            print(f"starting windowing with {windows}...")
-
-            print("computing recall...")
-            recall_score, thread = compute_stochastic_entropy_recall(
-                log, sample, window_size=windows,
-                # dump_location=samples_dir,
-                # dump_filename=f"s{i:02d}_w{windows}_recall"
+            export_to_xes_simple(
+                join(samples_dir, f"s{i:02d}_event_log.xes"),
+                sample
             )
-            # threads.append(thread)
-            print("computed recall...")
+            with open(join(samples_dir, f"s{i:02d}_event_log.eval"), "w") as f:
+                f.write(repr(sample))
 
-            print("computing precision...")
-            precision_score, thread = compute_stochastic_entropy_precision(
-                log, sample, window_size=windows,
-                # dump_location=samples_dir,
-                # dump_filename=f"s{i:02d}_w{windows}_precision"
-            )
-            # threads.append(thread)
-            print("computed precision...")
+            # compute window versions
+            for windows in range(5, 6, 2):
+                print(f"starting windowing with {windows}...")
 
-            recall[f"{windows}w"].append(recall_score)
-            precision[f"{windows}w"].append(precision_score)
-            print(f"completed windowing with {windows}...")
+                print("computing recall...")
+                recall_score, thread = compute_stochastic_entropy_recall(
+                    log, sample, window_size=windows,
+                    # dump_location=samples_dir,
+                    # dump_filename=f"s{i:02d}_w{windows}_recall"
+                )
+                # threads.append(thread)
+                print("computed recall...")
 
-        print(f"completed sample ({i+1}/{len(samples)})...")
+                print("computing precision...")
+                precision_score, thread = compute_stochastic_entropy_precision(
+                    log, sample, window_size=windows,
+                    # dump_location=samples_dir,
+                    # dump_filename=f"s{i:02d}_w{windows}_precision"
+                )
+                # threads.append(thread)
+                print("computed precision...")
+
+                recall[f"{windows}w"].append(recall_score)
+                precision[f"{windows}w"].append(precision_score)
+                print(f"completed windowing with {windows}...")
+
+            print(f"completed sample ({i+1}/{len(samples)})...")
+    except:
+        print("breaking and returning...")
+        pass
 
     return {"precision": precision, "recall": recall}
 
@@ -240,13 +244,13 @@ def evaluation(log_paths: List[PathLike]):
             "n_variants": log.get_nvariants(),
             "swaps": swaps,
         }
-        with open(join(dump_directory, f"{log.get_name()}_stats_v2.json"), "w") as f:
+        with open(join(dump_directory, f"{log.get_name()}_stats_v3.json"), "w") as f:
             f.write(dumps(stats, indent=4))
 
         # perform sampling
         info("performing sampling...")
         curves = sampling(log, 25, dump_directory=dump_directory)
-        with open(join(dump_directory, f"{log.get_name()}_scores_v2.json"), "w") as f:
+        with open(join(dump_directory, f"{log.get_name()}_scores_v3.json"), "w") as f:
             f.write(dumps(curves, indent=4))
 
         info("Finished...")
