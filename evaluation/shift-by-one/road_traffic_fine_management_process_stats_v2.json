@@ -1,9 +1,9 @@
 {
     "name": "road_traffic_fine_management_process",
     "size": 150370,
-    "activities": "{'E', 'I', 'J', 'K', 'B', 'D', 'F', 'G', 'H', 'C', 'A'}",
+    "activities": "{'J', 'A', 'B', 'F', 'H', 'I', 'E', 'K', 'C', 'D', 'G'}",
     "starts": "{'A'}",
-    "ends": "{'E', 'I', 'K', 'J', 'B', 'F', 'H'}",
+    "ends": "{'J', 'B', 'F', 'H', 'I', 'E', 'K'}",
     "n_variants": 231,
     "swaps": {
         "Create Fine": "A",

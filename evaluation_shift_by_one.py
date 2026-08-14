@@ -31,11 +31,15 @@ set_int_max_str_digits(18000)
 
 LOG_FOLDER = join(".", "logs")
 EVAL_LOGS = [
-    # join(LOG_FOLDER, "road_fines.xes"),
+    join(LOG_FOLDER, "road_fines.xes"),
     join(LOG_FOLDER, "sepsis.xes"),
-    # join(LOG_FOLDER, "bpic_2020_permits.xes"),
+    join(LOG_FOLDER, "bpic_2020_permits.xes"),
 ]
 # setLevel(INFO)
+FULL_PREFIX = False
+FACTOR = 10
+FILTER = 0
+DUMMMY_TRACE = Trace(["dummy"])
 
 threads: List[Thread] = []
 
@@ -63,6 +67,37 @@ def simplify_log_names(log: EventLog) -> Tuple[EventLog, Dict[str, str]]:
     log_name = log.get_name().lower().replace(" ", "_")
     return EventLog(traces, log_name), swaps
 
+def resize_log(log: EventLog, factor:int=4) -> EventLog:
+    """
+    Resizes the log by some factor to ensure the slang is the same,
+    but less prone to outliers or dropping of unique traces.
+    """
+    print("resize log with a factor of ", str(factor))
+    traces = []
+    for trace, freq in log:
+        traces += [Trace(trace)] * (freq * factor)
+    ret = EventLog(traces, log.get_name())
+    print("finished resizing...")
+    return ret
+
+def drop_n_least_freq(log: EventLog, n:int=100):
+    """
+    Reshapes the log to not include the n-least freq variants in the log. 
+    """
+    print(f"filtering the {n} least freq variants from log...")
+    traces = sorted(log._freqset.items(), reverse=True, key=lambda x: x[1])
+    traces = traces[:-n]
+    traces = [
+        trace
+        for trace, freq
+        in traces
+        for _ in range(freq)
+    ]
+    ret = EventLog(traces, log.get_name())
+    print(f"Log had {log.get_nvariants()} but now contains {ret.get_nvariants()}")
+    return ret
+
+
 
 def sampler(log: EventLog, size: int, randomer: Random = None) -> EventLog:
     """
@@ -76,7 +111,7 @@ def sampler(log: EventLog, size: int, randomer: Random = None) -> EventLog:
     pool_size = set(range(len(pool)))
 
     # dummy trace
-    dummy = Trace(["dummy"])
+    dummy = DUMMMY_TRACE
     pool.append((dummy, 0))
 
     # pick traces
@@ -111,7 +146,7 @@ def sampler(log: EventLog, size: int, randomer: Random = None) -> EventLog:
     return ret
 
 
-def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
+def sampling(log: EventLog, n_samples: int, dump_directory: PathLike, full_prefix:bool=False) -> Dict:
     """
     Computes a sample curve for the given log and number of samples.
     Each shifts a portion 1/n * |L| into a dummy trace to create a strictly
@@ -143,11 +178,11 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
     randomer = Random(2222)
 
     # construct samples
-    info("making samples...")
-    samples = []
+    print("making samples...")
+    samples: List[EventLog] = []
     step = int((len(log) + n_samples - 1) / n_samples)
-    curr_size = step
-    for i in range(n_samples):
+    curr_size = 0
+    for i in range(n_samples+1):
         samples.append(sampler(log, curr_size, randomer))
         curr_size += step
 
@@ -157,14 +192,16 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
         "2w": [],
         "3w": [],
         "5w": [],
-        "7w": []
+        "7w": [],
+        "full" : [],
     }
     recall = {
         "1w": [],
         "2w": [],
         "3w": [],
         "5w": [],
-        "7w": []
+        "7w": [],
+        "full" : []
     }
 
     # check for samples dir
@@ -174,42 +211,61 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
         mkdir(samples_dir)
 
     # compute scores
+    print("starting measurements...")
     try:
         for i, sample in enumerate(samples):
-            print(f"starting on sample {i} with size of {len(sample)}/{len(log)}...")
 
-            export_to_xes_simple(
-                join(samples_dir, f"s{i:02d}_event_log.xes"),
-                sample
-            )
-            with open(join(samples_dir, f"s{i:02d}_event_log.eval"), "w") as f:
-                f.write(repr(sample))
+            sample_size = sample._freqset[DUMMMY_TRACE] if DUMMMY_TRACE in sample._freqset else 0
+            print(f"starting on sample {i} with number of dummy traces as {sample_size}/{len(log)}...")
 
-            # compute window versions
-            for windows in range(5, 6, 2):
-                print(f"starting windowing with {windows}...")
+            # export_to_xes_simple(
+            #     join(samples_dir, f"s{i:02d}_event_log.xes"),
+            #     sample
+            # )
+            # with open(join(samples_dir, f"s{i:02d}_event_log.eval"), "w") as f:
+            #     f.write(repr(sample))
 
+            if full_prefix:
+                print("computing measures using full_prefix (this may take some time)...")
                 print("computing recall...")
                 recall_score, thread = compute_stochastic_entropy_recall(
-                    log, sample, window_size=windows,
-                    # dump_location=samples_dir,
-                    # dump_filename=f"s{i:02d}_w{windows}_recall"
-                )
-                # threads.append(thread)
+                    log, sample,
+                ) 
                 print("computed recall...")
-
+                
                 print("computing precision...")
                 precision_score, thread = compute_stochastic_entropy_precision(
-                    log, sample, window_size=windows,
-                    # dump_location=samples_dir,
-                    # dump_filename=f"s{i:02d}_w{windows}_precision"
+                    log, sample,
                 )
-                # threads.append(thread)
                 print("computed precision...")
+                recall["full"].append(recall_score)
+                precision["full"].append(precision_score)
+            else:
+                # compute window versions
+                for windows in range(1, 4, 2):
+                    print(f"starting windowing with {windows}...")
 
-                recall[f"{windows}w"].append(recall_score)
-                precision[f"{windows}w"].append(precision_score)
-                print(f"completed windowing with {windows}...")
+                    print("computing recall...")
+                    recall_score, thread = compute_stochastic_entropy_recall(
+                        log, sample, window_size=windows,
+                        # dump_location=samples_dir,
+                        # dump_filename=f"s{i:02d}_w{windows}_recall"
+                    )
+                    # threads.append(thread)
+                    print("computed recall...")
+
+                    print("computing precision...")
+                    precision_score, thread = compute_stochastic_entropy_precision(
+                        log, sample, window_size=windows,
+                        # dump_location=samples_dir,
+                        # dump_filename=f"s{i:02d}_w{windows}_precision"
+                    )
+                    # threads.append(thread)
+                    print("computed precision...")
+
+                    recall[f"{windows}w"].append(recall_score)
+                    precision[f"{windows}w"].append(precision_score)
+                    print(f"completed windowing with {windows}...")
 
             print(f"completed sample ({i+1}/{len(samples)})...")
     except:
@@ -219,7 +275,7 @@ def sampling(log: EventLog, n_samples: int, dump_directory: PathLike) -> Dict:
     return {"precision": precision, "recall": recall}
 
 
-def evaluation(log_paths: List[PathLike]):
+def evaluation(log_paths: List[PathLike], full_prefix_length:bool=False):
     """
     Computes a sample curve on each of the given logs.
     """
@@ -231,7 +287,10 @@ def evaluation(log_paths: List[PathLike]):
         log = read_xes_simple(log_path)
 
         # swap out long activity names
+        if FILTER > 0:
+            log = drop_n_least_freq(log, FILTER)
         log, swaps = simplify_log_names(log)
+        log = resize_log(log, factor=FACTOR)
 
         # read log and dump out stats
         info("collecting stats...")
@@ -244,13 +303,13 @@ def evaluation(log_paths: List[PathLike]):
             "n_variants": log.get_nvariants(),
             "swaps": swaps,
         }
-        with open(join(dump_directory, f"{log.get_name()}_stats_v3.json"), "w") as f:
+        with open(join(dump_directory, f"{log.get_name()}_stats_v4.json"), "w") as f:
             f.write(dumps(stats, indent=4))
 
         # perform sampling
         info("performing sampling...")
-        curves = sampling(log, 25, dump_directory=dump_directory)
-        with open(join(dump_directory, f"{log.get_name()}_scores_v3.json"), "w") as f:
+        curves = sampling(log, 25, dump_directory=dump_directory, full_prefix=full_prefix_length)
+        with open(join(dump_directory, f"{log.get_name()}_scores_v4.json"), "w") as f:
             f.write(dumps(curves, indent=4))
 
         info("Finished...")
@@ -267,4 +326,4 @@ def evaluation(log_paths: List[PathLike]):
 
 
 if __name__ == "__main__":
-    evaluation(EVAL_LOGS)
+    evaluation(EVAL_LOGS, FULL_PREFIX)

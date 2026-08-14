@@ -1,5 +1,5 @@
 EventLog(
-	[Trace(['C','AH','AP','D','A','B','E','M','AL','F','G','H'])] * 18+
-	[Trace(['C','AH','D','A','B','E','M','F','G','H'])] * 538+
-	[Trace(['dummy'])] * 6509
+	[Trace(['A','B','C','D','E','F','G','H','I','J'])] * 5508+
+	[Trace(['A','B','K','C','D','E','F','G','L','H','I','J'])] * 338+
+	[Trace(['dummy'])] * 42944
 )

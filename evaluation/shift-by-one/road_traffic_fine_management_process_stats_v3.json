@@ -1,0 +1,21 @@
+{
+    "name": "road_traffic_fine_management_process",
+    "size": 601480,
+    "activities": "{'G', 'D', 'E', 'H', 'K', 'B', 'A', 'C', 'I', 'F', 'J'}",
+    "starts": "{'A'}",
+    "ends": "{'E', 'H', 'K', 'B', 'I', 'F', 'J'}",
+    "n_variants": 231,
+    "swaps": {
+        "Create Fine": "A",
+        "Send Fine": "B",
+        "Insert Fine Notification": "C",
+        "Add penalty": "D",
+        "Send for Credit Collection": "E",
+        "Payment": "F",
+        "Insert Date Appeal to Prefecture": "G",
+        "Send Appeal to Prefecture": "H",
+        "Receive Result Appeal from Prefecture": "I",
+        "Notify Result Appeal to Offender": "J",
+        "Appeal to Judge": "K"
+    }
+}

@@ -25,13 +25,14 @@ for stats in stat_files:
                 row_data.append((sample, measure, window, int(i * 4)))
 
     df = pd.DataFrame(row_data, columns=["score", "measurement", "window", "sample"])
+    df["color-pick"] = df["measurement"] + df["window"]
 
     # make plot
     fig = px.line(
         df,
         x="sample",
         y="score",
-        color="measurement",
+        color="window",
         facet_col="measurement",
         symbol="window",
         line_dash='window',

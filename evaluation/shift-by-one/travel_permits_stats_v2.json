@@ -1,9 +1,9 @@
 {
     "name": "travel_permits",
     "size": 7065,
-    "activities": "{'U', 'D', 'O', 'AM', 'AK', 'AD', 'L', 'AC', 'V', 'S', 'AG', 'P', 'AQ', 'AV', 'C', 'AR', 'AT', 'AS', 'B', 'AX', 'R', 'AL', 'J', 'AY', 'Z', 'M', 'H', 'X', 'K', 'AU', 'I', 'T', 'AO', 'AF', 'AJ', 'E', 'AN', 'Q', 'A', 'AH', 'AP', 'F', 'G', 'Y', 'N', 'AE', 'W', 'AW', 'AI', 'AA', 'AB'}",
+    "activities": "{'AP', 'U', 'G', 'P', 'K', 'X', 'AD', 'AC', 'AJ', 'W', 'H', 'J', 'Y', 'AU', 'Q', 'F', 'AM', 'V', 'N', 'Z', 'L', 'I', 'AV', 'AS', 'D', 'E', 'B', 'O', 'AF', 'AH', 'AI', 'T', 'AA', 'AR', 'AW', 'AY', 'S', 'AG', 'AK', 'AT', 'M', 'R', 'AE', 'AX', 'AB', 'C', 'AL', 'AQ', 'A', 'AO', 'AN'}",
     "starts": "{'I', 'A', 'C'}",
-    "ends": "{'P', 'Q', 'G', 'D', 'I', 'AE', 'B', 'R', 'Z', 'V', 'X', 'H'}",
+    "ends": "{'Q', 'V', 'Z', 'R', 'AE', 'I', 'D', 'H', 'B', 'G', 'P', 'X'}",
     "n_variants": 1478,
     "swaps": {
         "Start trip": "A",

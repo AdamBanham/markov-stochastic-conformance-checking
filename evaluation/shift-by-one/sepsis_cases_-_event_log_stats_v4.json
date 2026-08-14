@@ -1,0 +1,26 @@
+{
+    "name": "sepsis_cases_-_event_log",
+    "size": 10500,
+    "activities": "{'C', 'E', 'N', 'I', 'O', 'J', 'K', 'G', 'B', 'D', 'A', 'M', 'P', 'L', 'H', 'F'}",
+    "starts": "{'C', 'E', 'G', 'B', 'A', 'F'}",
+    "ends": "{'C', 'E', 'N', 'I', 'J', 'O', 'K', 'G', 'B', 'D', 'F', 'M', 'P', 'H'}",
+    "n_variants": 846,
+    "swaps": {
+        "ER Registration": "A",
+        "Leucocytes": "B",
+        "CRP": "C",
+        "LacticAcid": "D",
+        "ER Triage": "E",
+        "ER Sepsis Triage": "F",
+        "IV Liquid": "G",
+        "IV Antibiotics": "H",
+        "Admission NC": "I",
+        "Release A": "J",
+        "Return ER": "K",
+        "Admission IC": "L",
+        "Release B": "M",
+        "Release C": "N",
+        "Release D": "O",
+        "Release E": "P"
+    }
+}

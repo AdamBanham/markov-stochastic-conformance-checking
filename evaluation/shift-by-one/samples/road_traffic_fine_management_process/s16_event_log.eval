@@ -1,0 +1,5 @@
+EventLog(
+	[Trace(['A','B','C','D','E'])] * 116457+
+	[Trace(['A','F'])] * 76003+
+	[Trace(['dummy'])] * 409020
+)
