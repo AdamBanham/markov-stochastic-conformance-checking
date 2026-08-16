@@ -31,14 +31,20 @@ set_int_max_str_digits(18000)
 
 LOG_FOLDER = join(".", "logs")
 EVAL_LOGS = [
-    join(LOG_FOLDER, "road_fines.xes"),
-    join(LOG_FOLDER, "sepsis.xes"),
-    join(LOG_FOLDER, "bpic_2020_permits.xes"),
+    # join(LOG_FOLDER, "road_fines.xes"),
+    # join(LOG_FOLDER, "sepsis.xes"),
+    # join(LOG_FOLDER, "bpic_2020_permits.xes"),
+]
+SOCIAL_LOGS = [
+    join(LOG_FOLDER, "brazil_1.xes"),
+    join(LOG_FOLDER, "honduras_coordinated.xes"),
+    join(LOG_FOLDER, "uae_coordinated.xes"),
 ]
 # setLevel(INFO)
 FULL_PREFIX = False
 FACTOR = 10
 FILTER = 0
+PROCESS_SOCIAL_LOGS = True
 DUMMMY_TRACE = Trace(["dummy"])
 
 threads: List[Thread] = []
@@ -326,4 +332,7 @@ def evaluation(log_paths: List[PathLike], full_prefix_length:bool=False):
 
 
 if __name__ == "__main__":
-    evaluation(EVAL_LOGS, FULL_PREFIX)
+    logs = [] + EVAL_LOGS
+    if PROCESS_SOCIAL_LOGS:
+        logs = logs + SOCIAL_LOGS
+    evaluation(logs, FULL_PREFIX)
