@@ -56,7 +56,7 @@ fig = px.scatter(
     symbol="window",
     marginal_y="histogram",
     labels=dict(runtime="Runtime in Seconds", measurement="technique",
-                net_size="# nodes in intersection", log_name="Event Log"),
+                net_size="# states in intersection", log_name="Event Log"),
     width=1000,
     height=375,
     opacity=0.33,
