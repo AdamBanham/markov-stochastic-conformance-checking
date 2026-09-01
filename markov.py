@@ -170,19 +170,6 @@ class FiniteLabelledMarkovChain:
             ret.add(word)
         return ret
 
-    def likelihood_of(self, variant: Trace) -> float:
-        """
-        Computes the likelihood of seeing this variant.
-        Unknown variants are defaulted to zero.
-        """
-        prob = 1.0
-
-        curr = self._starting
-        for action in variant:
-            pass
-
-        return prob
-
     def add_variant(self, variant: Trace, freq: int, window_length=-1):
         """
         Expands the net to include transitions and states to account for the

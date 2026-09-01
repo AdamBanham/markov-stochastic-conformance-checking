@@ -1,7 +1,7 @@
 from markov import FiniteLabelledMarkovChain
 from pmkoalas.simple import EventLog
 from pmkoalas.complex import ComplexEventLog
-from pmkoalas.models.petrinets.wpn import BuildablePetriNet, WeightedAcceptingPetriNet
+from pmkoalas.models.petrinets.wpn import WeightedAcceptingPetriNet
 
 
 def discover_chain_from_log(
